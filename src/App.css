@@ -1,3 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    border-radius: 10px;
+    width:98%;
+    height: max-content;
+    object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
+    object-position: center;
+   
+}
+
 .pm-reel-container{
     position: relative;
     display: flex;
@@ -9,31 +24,55 @@
 }
 
 .pm-projects-container {
-    display: flex;
-    flex-wrap: wrap ;
-    border: none; /*borde de los proyectos*/
-    width: 98vw;
-    height: auto;
-    margin: 0vw 0.5vw;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-auto-rows: auto; /* Filas automáticas según el contenido */
+    gap: 0px; /* Espaciado entre columnas y filas */
+    place-self: center;
+    
 }
 
 .pm-project {
     width: 46vw;
     height: 26vw;
+    max-height: 26vw;
     border: none; /*borde de c/ proyecto*/
     margin:0.4vw; /*espacio entre azul y rojo*/
     position: relative;
+    grid-area: auto / auto / auto / auto;
+    overflow: hidden; /*para que no se vea lo que sale del contenedor*/
 }
 
 .pm-project-image {
     position: absolute; /*posicion de la imagen*/
+    width: 100%;
+    max-height: 27vw; 
+    border-radius: 10px; /*borde de c/ proyecto*/
+
+    box-sizing: border-box; /*ver q onda esto*/
+    /* display: flex; */
+    align-items: center;
+    background: transparent;
+    transition: all 0.5s ease;
+    object-fit: cover;
+}
+
+.pm-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen al contenedor manteniendo su proporción */
+    object-position: center;
+    border-radius: 10px; /*borde de c/ proyecto*/
+}
+.pm-project-image:hover {
+    transform: scale(1.1); /*aumenta el tamaño de la imagen al pasar el mouse*/
+    transition: transform 0.5s ease-in-out;
 }
 
 .pm-project-text { /*texto dentro de proyectos*/
     position:absolute;
     align-items: center;
-    justify-content: center;
+    justify-self: center;
     display: flex;
     inset: 0;
     font-size: 2.5vw;
@@ -54,14 +93,7 @@
     transition: filter 0.5s ease;
 }
 
-img {
-    border-radius: 10px;
-    max-width:100%;
-    max-height:100%;
-    box-sizing: border-box; /*ver q onda esto*/  
-    display: inline-block ;
-   
-}
+
 
 a {
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
