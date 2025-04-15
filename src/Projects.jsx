@@ -6,7 +6,7 @@ export function Projects ({ projectName, imgFileName }) {
       <div className="pm-project">
         <Link to={`/projects/${projectName.replace(/\s+/g, '-').toLowerCase()}`}>
           <div className="pm-project-image">
-            <img src={`./src/assets/ProjectsImgs/${imgFileName}`} alt="Imagen del proyecto"/>
+            <img src={`./assets/ProjectsImgs/${imgFileName}`} alt="Imagen del proyecto"/>
             <span className="pm-project-text">{projectName}</span>
           </div>
         </Link>
