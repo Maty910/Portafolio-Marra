@@ -1,3 +1,11 @@
+:root {
+    --color-1: #0c0c0c;
+    --dark-blue: #050315;
+    --color-3: #de0bd7;
+    --color-4: #b5b5b5;
+    --color-5: #f2f2f2;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +19,68 @@ img {
     object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
     object-position: center;
    
+}
+
+.pm-header {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(11, 11, 11, 0.3);
+    padding: 2.5vw;
+    margin: 1.5vw;
+    width: 99vw;
+    height: 10vh;
+}
+
+.pm-header h1 {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+}
+
+.pm-header h1:hover {
+    color: var(--dark-blue); /* Cambia el color al pasar el mouse */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.pm-header p {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5vw;
+    color: beige; /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+}
+
+.pm-header a {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5vw;
+    text-decoration: none;
+    padding: 2px;  
+    color: beige; /*color letras nav*/
+}
+
+.pm-header ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Muestra los elementos en línea */
+    gap: 2vw; /* Espacio entre los elementos */
+    justify-content: center;
+}
+.pm-header ul li {
+    display: inline-block; /* Asegura que los elementos estén en línea */
+}
+
+main {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: auto auto; */
+    gap: .5vw;
+    padding: 0.5vw;
+    background-color: #0c0c0c;
+    width: 99vw;
 }
 
 .pm-reel-container{
@@ -41,6 +111,7 @@ img {
     position: relative;
     grid-area: auto / auto / auto / auto;
     overflow: hidden; /*para que no se vea lo que sale del contenedor*/
+    border-radius: 10px; /*borde redondeado aplicado al contenedor*/
 }
 
 .pm-project-image {

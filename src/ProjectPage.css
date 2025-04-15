@@ -1,0 +1,40 @@
+h1 {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--color-5); /*color letras nav*/
+  text-align: center;
+}
+
+p {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+}
+
+a {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 2px;
+  color: beige; /*color letras nav*/
+}
+
+h3 {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--color-5); /*color letras nav*/
+  text-align: start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pm-stills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajusta el número de columnas según el tamaño de la pantalla */
+  align-items: center;
+  gap: 1rem; /* Espacio entre las imágenes */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #0c0c0c;
+  height: auto;
+}
