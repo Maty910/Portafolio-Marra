@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-    --color-1: #0c0c0c;
+    --color-1: #000000;
     --dark-blue: #050315;
     --color-3: #de0bd7;
     --color-4: #b5b5b5;
@@ -12,6 +15,14 @@
     box-sizing: border-box;
 }
 
+html {
+   width: 99%;
+}
+
+body {
+    width: 99%;
+ }
+
 img {
     border-radius: 10px;
     width:98%;
@@ -23,52 +34,56 @@ img {
 
 .pm-header {
     display: flex;
-    /* align-items: center; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgba(11, 11, 11, 0.3);
+    background-color: var(--color-1);
     padding: 2.5vw;
-    margin: 1.5vw;
+    /* margin: 1.5vw; */
     width: 99vw;
     height: 10vh;
+    padding-top: 8.5vh;
+    padding-bottom: 8.5vh
 }
 
 .pm-header h1 {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 3vw;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4vw;
     color: var(--color-5); /*color letras nav*/
     text-align: center;
     justify-content: center;
+    letter-spacing: .1vw;
 }
 
-.pm-header h1:hover {
-    color: var(--dark-blue); /* Cambia el color al pasar el mouse */
-    transition: color 0.3s ease; /* Transición suave */
-}
+/* .pm-header h1:hover {
+    transition: color 0.3s ease; Transición suave 
+} */
 
 .pm-header p {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.5vw;
-    color: beige; /*color letras nav*/
+    font-family: 'Inter', sans-serif;
+    font-size: 1.7vw;
+    color: var(--color-5); /*color letras nav*/
     text-align: center;
     justify-content: center;
+    margin-top: -1vw;
 }
 
 .pm-header a {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.5vw;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1vw;
     text-decoration: none;
     padding: 2px;  
-    color: beige; /*color letras nav*/
+    color: var(--color-5); /*color letras nav*/
 }
 
 .pm-header ul {
     list-style: none; /* Elimina los puntos de la lista */
     display: flex; /* Muestra los elementos en línea */
-    gap: 2vw; /* Espacio entre los elementos */
+    gap: 9vw; /* Espacio entre los elementos */
     justify-content: center;
+    color: var(--color-5); 
 }
+
 .pm-header ul li {
     display: inline-block; /* Asegura que los elementos estén en línea */
 }
@@ -78,8 +93,8 @@ main {
     /* grid-template-columns: 1fr 1fr; */
     /* grid-template-rows: auto auto; */
     gap: .5vw;
-    padding: 0.5vw;
-    background-color: #0c0c0c;
+    /* padding: 0.5vw; */
+    background-color: var(--color-1);
     width: 99vw;
 }
 
@@ -90,7 +105,9 @@ main {
     margin: 0.7vw 20vw;
     width: fit-content;
     height: fit-content;
-    background-color: red;
+    background-color: var(--color-1);
+    border-radius: 10px; /*borde de c/ proyecto*/
+    overflow: hidden; /*para que no se vea lo que sale del contenedor*/
 }
 
 .pm-projects-container {
@@ -146,22 +163,23 @@ main {
     justify-self: center;
     display: flex;
     inset: 0;
-    font-size: 2.5vw;
-    font-family: 'Segoe UI';
+    font-size: 2vw;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--color-5); 
     background: none;
-    letter-spacing: 6px;
+    letter-spacing: .1vw;
     opacity:0;
 }
 
 .pm-project .pm-project-text:hover {
     opacity: 1;
-    transition: opacity 0.5 ease;
+    transition: opacity 0.1s ease-out;
     
 }
 
 .pm-project:hover .pm-project-image img {
     filter: brightness(40%);
-    transition: filter 0.5s ease;
+    transition: filter 0.3s ease-out;
 }
 
 
@@ -171,7 +189,7 @@ a {
     font-size: 1.5vw;
     text-decoration: none;
     padding: 2px;  
-    color:beige; /*color letras nav*/
+    color:var(--color-5) /*color letras nav*/
 }
 
 iframe {
@@ -181,7 +199,7 @@ iframe {
 }
 
 .pm-main {
-    background-color: black;
+    background-color: var(--color-1);
     display: block;
     width: 98vw; /*ancho del container de los proyectos*/
     height: fit-content;

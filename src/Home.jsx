@@ -8,7 +8,15 @@ export function Home () {
     <Header />
       <main>
         <section className="pm-reel-container">
-        <iframe width="733" height="412" src="https://www.youtube.com/embed/S0fbNTftQhc" title="VIDEO SON MALOS final 1 prueba" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen
+        <iframe 
+          width="733" 
+          height="412" 
+          src="https://www.youtube.com/embed/kGhOKnBQQcE?autoplay=1&mute=1" 
+          title="0" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
         </section>
         <section className="pm-projects-container">
