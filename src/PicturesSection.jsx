@@ -9,15 +9,16 @@ function PicturesSection () {
     <section className="pm-pictures-section">
       <h2 className='pm-subtitle'>Pictures:</h2>
       <div className="pm-pictures-container">
-        <img src="src/assets/stills ccqns/22.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/23.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/24.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/25.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/26.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/27.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/28.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/29.jpg" alt="Castillo de arena" />
-        <img src="src/assets/stills ccqns/29.jpg" alt="Castillo de arena" />
+        <img src="src/assets/pictures/1.jpg" alt="Image description" />
+        <img src="src/assets/pictures/2.jpg" alt="Image description" />
+        <img src="src/assets/pictures/3.jpg" alt="Image description" />
+        <img src="src/assets/pictures/4.jpg" alt="Image description" />
+        <img src="src/assets/pictures/5.jpg" alt="Image description" />
+        <img src="src/assets/pictures/6.jpg" alt="Image description" />
+        <img src="src/assets/pictures/7.jpg" alt="Image description" />
+        <img src="src/assets/pictures/8.jpg" alt="Image description" />
+        <img src="src/assets/pictures/9.jpg" alt="Image description" />
+        <img src="src/assets/pictures/10.jpg" alt="Image description" />
       </div>
     </section>
     <Footer />

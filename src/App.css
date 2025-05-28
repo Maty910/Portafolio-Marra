@@ -242,16 +242,35 @@ iframe {
 }
 
 .pm-pictures-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    grid-auto-rows: auto; /* Filas automáticas según el contenido */
-    gap: 2vw; /* Espaciado entre columnas y filas */
-    place-self: center;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: start;
     background-color: var(--color-1);
     width: 100%;
-    height: fit-content;
-    padding: 0.5vw; /*espacio entre azul y rojo*/
-    border-radius: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0.5vw;
+    
+}
+
+.pm-pictures-container img {
+    width: max-content; /* Ancho de las imágenes */
+    max-width: 100%; /* Ancho máximo de las imágenes */
+    height: 30vw; /* Alto de las imágenes */
+    margin: 0.5vw; /* Espacio entre las imágenes */
+    border-radius: 10px; /* Borde redondeado */
+    object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
+    object-position: center; /* Centra la imagen dentro del contenedor */   
+    transition: transform 0.4s ease-in-out; /* Transición suave */
+    border: none; /* Elimina el borde de las imágenes */
+    cursor: zoom-in; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.pm-pictures-container img:hover {
+    transform: scale(.9); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    transition: transform 0.4s ease-in-out; /* Transición suave */
+    
 }
 
 .pm-project-title {

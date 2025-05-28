@@ -16,8 +16,10 @@ export function Home () {
           title="0" 
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          sandbox="allow-scripts allow-same-origin"
+          loading="lazy"
+          name="video-frame"
         ></iframe>
         </section>
         <section className="pm-projects-container">
