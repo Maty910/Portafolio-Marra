@@ -13,7 +13,10 @@ export function App () {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Página principal */}
+          <Route 
+            path="/" 
+            element={<Home />} 
+          /> {/* Página principal */}
           <Route
             path="/projects/:projectName"
             element={<ProjectPage />}

@@ -374,6 +374,72 @@ iframe {
     text-align: center;
     justify-content: center;
     margin-top: 1vw;
-    margin-bottom: 1vw;
+    margin-bottom: 10vw;
     background-color: var(--color-1);
+}
+
+.pm-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+    width: 100%;
+    height: fit-content;
+    padding-top: 2vw;
+}
+
+.pm-footer-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    margin-top:-1vw;
+    margin-bottom: 1vw;
+}
+
+.pm-footer a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2vw;
+    text-decoration: none;
+    padding: 2px;  
+    color: var(--color-5); /*color letras nav*/
+}   
+
+.pm-footer a:hover {
+    filter: brightness(1.8); /* Oscurece el enlace al pasar el mouse */
+    transition: color;
+    /* color:var(--color-3); */
+    text-shadow: 0px 2px 5px var(--color-3); /* Añade un brillo al enlace */
+    color: rgb(156, 155, 155); /* Cambia el color del enlace al pasar el mouse */
+}
+
+.pm-footer h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7vw;
+    font-weight: 500;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+
+.pm-footer-dev {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: .9vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.pm-footer-dev a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: .9vw;
+    text-decoration: none;
+    padding: 2px;  
+    color: var(--color-5); /*color letras nav*/
 }

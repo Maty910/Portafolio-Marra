@@ -1,6 +1,7 @@
 import { Projects } from './Projects'
 import './App.css'
 import { Header} from './Header.jsx'
+import { Footer} from './Footer.jsx'
 
 export function Home () {
   return (
@@ -28,6 +29,7 @@ export function Home () {
           <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
         </section>
       </main>
+      <Footer />
     </>
   )
 }

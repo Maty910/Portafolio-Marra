@@ -1,5 +1,6 @@
 import './App.css'
 import { Header } from './Header'
+import { Footer } from './Footer'
 
 export function Contact () {
   return (
@@ -17,6 +18,7 @@ export function Contact () {
       </div>
       <p className='pm-contact-location'>Buenos Aires, Argentina 🇦🇷</p>
     </section>
+    <Footer />
   </>
   )
 }

@@ -1,7 +1,11 @@
 import './App.css'
+import { Header } from './Header.jsx' 
+import { Footer } from './Footer'
 
 function PicturesSection () {
   return (
+    <>
+    <Header />
     <section className="pm-pictures-section">
       <h2 className='pm-subtitle'>Pictures:</h2>
       <div className="pm-pictures-container">
@@ -16,6 +20,8 @@ function PicturesSection () {
         <img src="src/assets/stills ccqns/29.jpg" alt="Castillo de arena" />
       </div>
     </section>
+    <Footer />
+    </>
   )
 }
 
