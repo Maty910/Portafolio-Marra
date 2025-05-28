@@ -9,6 +9,10 @@
     --color-5: #f2f2f2;
 }
 
+#root {
+    background-color: var(--color-1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,17 +20,19 @@
 }
 
 html {
-   width: 99%;
+   width: 100%;
+   background-color: var(--color-1);
 }
 
 body {
-    width: 99%;
+    width: 100%;
+    background-color: var(--color-1);
  }
 
 img {
-    border-radius: 10px;
+    /* border-radius: 10px; */
     width:98%;
-    height: max-content;
+    /* height: max-content; */
     object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
     object-position: center;
    
@@ -38,9 +44,7 @@ img {
     justify-content: center;
     align-items: center;
     background-color: var(--color-1);
-    padding: 2.5vw;
-    /* margin: 1.5vw; */
-    width: 99vw;
+    width: 100%;
     height: 10vh;
     padding-top: 8.5vh;
     padding-bottom: 8.5vh
@@ -95,7 +99,7 @@ main {
     gap: .5vw;
     /* padding: 0.5vw; */
     background-color: var(--color-1);
-    width: 99vw;
+    width: 100%;
 }
 
 .pm-reel-container{
@@ -116,7 +120,10 @@ main {
     grid-auto-rows: auto; /* Filas automáticas según el contenido */
     gap: 0px; /* Espaciado entre columnas y filas */
     place-self: center;
-    
+    background-color: var(--color-1);
+    width: 100%;
+    height: fit-content;
+    padding: 0.5vw; /*espacio entre azul y rojo*/
 }
 
 .pm-project {
@@ -171,18 +178,21 @@ main {
     opacity:0;
 }
 
-.pm-project .pm-project-text:hover {
+.pm-project {
     opacity: 1;
     transition: opacity 0.1s ease-out;
     
+}
+
+.pm-project:hover .pm-project-text {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
 }
 
 .pm-project:hover .pm-project-image img {
     filter: brightness(40%);
     transition: filter 0.3s ease-out;
 }
-
-
 
 a {
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
@@ -207,4 +217,163 @@ iframe {
     left: 0;
     right: 0;
     box-sizing: border-box;
+}
+
+.pm-subtitle{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8vw;
+    color: var(--color-5); /*color letras nav*/
+    background-color: var(--color-1); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    /* margin-top: 1vw; */
+    /* margin-bottom: 1vw; */
+}
+
+.pm-pictures-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+    width: 100%;
+    height: fit-content;
+    padding-top: 2vw;
+}
+
+.pm-pictures-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-auto-rows: auto; /* Filas automáticas según el contenido */
+    gap: 2vw; /* Espaciado entre columnas y filas */
+    place-self: center;
+    background-color: var(--color-1);
+    width: 100%;
+    height: fit-content;
+    padding: 0.5vw; /*espacio entre azul y rojo*/
+    border-radius: 10px;
+}
+
+.pm-project-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    background-color: var(--color-1);
+}
+
+.pm-project-details {
+    background: var(--color-1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: right;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 2vw;
+    width: 36vw;
+    justify-self: end;
+}
+
+.pm-project-h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.pm-stills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2); /* Tres columnas */
+    grid-auto-rows: auto; /* Filas automáticas según el contenido */
+    gap: 0.5vw; /* Espaciado entre columnas y filas */
+    place-self: center;
+    background-color: var(--color-1);
+    width: 100%;
+    height: fit-content;
+    padding: 0.5vw; /*espacio entre azul y rojo*/
+}
+
+.pm-stills-container img {
+    border-radius: 10px;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    border: none; 
+}
+
+.pm-contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+    width: 100%;
+    height: fit-content;
+    padding-top: 2vw;
+}
+
+.pm-contact-container {
+    display: grid;
+    grid-auto-rows: auto; /* Filas automáticas según el contenido */
+    gap: .1vw; /* Espaciado entre columnas y filas */
+    place-self: center;
+    background-color: var(--color-1);
+    width: 100%;
+    height: fit-content;
+    padding: 0.5vw; /*espacio entre azul y rojo*/
+}
+
+.pm-contact-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    background-color: var(--color-1);
+}
+
+.pm-contact-a {
+    background: var(--color-1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: right;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 2vw;
+    width: 36vw;
+    justify-self: end;
+}
+
+.pm-contact-a a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2vw;
+    text-decoration: none;
+    padding: 2px;  
+    color: var(--color-5); /*color letras nav*/
+}
+.pm-contact-a a:hover {
+    filter: brightness(1.8); /* Oscurece el enlace al pasar el mouse */
+    transition: color 0.3s ease; /* Transición suave */text-shadow: 0px 2px 5px var(--color-3); /* Añade un brillo al enlace */
+}
+
+.pm-contact-location {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: center;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    background-color: var(--color-1);
 }
