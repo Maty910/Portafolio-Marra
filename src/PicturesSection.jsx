@@ -25,3 +25,5 @@ export function PicturesSection () {
     </>
   )
 }
+
+export default PicturesSection
