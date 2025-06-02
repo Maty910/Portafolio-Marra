@@ -2,7 +2,7 @@ import './App.css'
 import { Header } from './Header.jsx' 
 import { Footer } from './Footer'
 
-function PicturesSection () {
+export function PicturesSection () {
   return (
     <>
     <Header />
@@ -25,5 +25,3 @@ function PicturesSection () {
     </>
   )
 }
-
-export default PicturesSection
