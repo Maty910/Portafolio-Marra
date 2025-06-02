@@ -12,9 +12,9 @@ export function Header () {
         </div>
         <ul className="nav">
           <li className="nav-button"><Link to="/">HOME</Link></li>
-          <li className="nav-button"><Link to="/ProjectsSection">PROJECTS</Link></li>
-          <li className="nav-button"><a href="/PicturesSection">PICTURES</a></li>
-          <li className="nav-button"><Link to="/Contact">CONTACT </Link></li>
+          <li className="nav-button"><Link to="/projects">PROJECTS</Link></li>
+          <li className="nav-button"><Link to="/pictures">PICTURES</Link></li>
+          <li className="nav-button"><Link to="/contact">CONTACT </Link></li>
         </ul>
       </nav>
     </header>

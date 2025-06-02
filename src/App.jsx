@@ -22,15 +22,15 @@ export function App () {
             element={<ProjectPage />}
           /> {/* Página de proyecto */}
           <Route
-            path="/ProjectsSection"
+            path="/projects"
             element={<ProjectsSection />}
           /> {/* Sección de proyectos */}
         <Route
-            path="/PicturesSection"
+            path="/pictures"
             element={<PicturesSection />}
           /> {/* Sección de fotografías */}
         <Route
-            path="/Contact"
+            path="/contact"
             element={<Contact />}
           /> {/* Sección de contacto */}
         </Routes>
