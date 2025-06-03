@@ -557,7 +557,7 @@ iframe {
 
 @media screen and (max-width: 768px) {
     .pm-header h1 {
-        font-size: 6vw; /* Ajusta el tamaño del título en pantallas pequeñas */
+        font-size: 9vw; /* Ajusta el tamaño del título en pantallas pequeñas */
     }
     
     .pm-header p {
@@ -660,6 +660,71 @@ iframe {
         object-position: center; /* Centra el iframe dentro del contenedor */
     }
     
+    .pm-pictures-text {
+        font-size: 3vw; /* Ajusta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+        margin-top: 1vw; /* Añade espacio arriba */
+        margin-bottom: 1vw; /* Añade espacio abajo */
+        width: 100%; /* Ancho completo del contenedor de texto */
+    }
+
+    .pm-pictures-container {
+        display: grid; /* Cambia a grid para mejor disposición en pantallas pequeñas */
+        grid-template-columns: repeat(auto-fill, minmax(90vw, 1fr)); /* Ajusta el número de columnas según el ancho */
+        grid-auto-rows: auto; /* Filas automáticas según el contenido */
+        gap: 1vw; /* Espaciado entre columnas y filas */
+        padding: 0.5vw; /* Espacio entre el contenedor y las imágenes */
+        width: 100%; /* Ancho completo del contenedor */
+        height: fit-content; /* Ajusta la altura del contenedor */
+    }
+
+    .pm-pictures-container img {
+        width: 100%; /* Ancho completo de las imágenes en pantallas pequeñas */
+        height: max-content; /* Altura automática para mantener la proporción */
+        max-height: 80vh; /* Altura máxima de las imágenes */
+        border-radius: 10px; /* Borde redondeado */
+        object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
+        object-position: center; /* Centra la imagen dentro del contenedor */
+    }
+
+    .pm-modal-content {
+        width: 99vw; /* Ancho del modal en pantallas pequeñas */
+        max-height: 99vh; /* Altura máxima del modal en pantallas pequeñas */
+        overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es demasiado grande */
+        border-radius: 10px; /* Borde redondeado */        
+    }
+    
+    .pm-modal-content img {
+        width: 100%; /* Ancho completo de la imagen en el modal */
+        height: auto; /* Altura automática para mantener la proporción */
+        border-radius: 10px; /* Borde redondeado */
+        object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
+        object-position: center; /* Centra la imagen dentro del contenedor */
+    }
+
+    .pm-contact-section {
+        display: flex;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        justify-content: center; /* Centra los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+        background-color: var(--color-1);
+        width: 100%;
+        height: fit-content;
+        padding-top: 2vw; /* Añade espacio arriba */
+    }
+
+    .pm-close {
+        position: absolute; /* Posición absoluta para el botón de cerrar */
+        top: 6vw; /* Espacio desde la parte superior */
+        right: 6vw; /* Espacio desde la derecha */
+        color: var(--color-3); /* Color del botón de cerrar */
+        background-color: transparent; /* Fondo transparente */
+        font-size: 8vw; /* Tamaño del texto del botón de cerrar */
+        font-weight: bold; /* Negrita para el texto del botón de cerrar */
+        transition: color 0.3s ease; /* Transición suave al cambiar el color */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón de cerrar */
+    }
+
     .pm-contact-container {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
         grid-auto-rows: auto; /* Filas automáticas según el contenido */
@@ -692,5 +757,17 @@ iframe {
         flex-direction: column; /* Cambia a columna en pantallas pequeñas */
         align-items: center; /* Centra los elementos en el eje horizontal */
         padding: 1vw; /* Añade espacio alrededor del footer */
+    }
+
+    .pm-footer-text, .pm-footer h2, .pm-footer-dev {
+        font-size: 3vw; /* Ajusta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+        margin-top: 1vw; /* Añade espacio arriba */
+        margin-bottom: 1vw; /* Añade espacio abajo */
+    }
+
+    .pm-footer a {
+        font-size: 3vw; /* Ajusta el tamaño del enlace en pantallas pequeñas */
+        text-decoration: none; /* Elimina el subrayado del enlace */
     }
 }
