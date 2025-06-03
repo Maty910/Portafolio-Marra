@@ -289,8 +289,68 @@ iframe {
 .pm-pictures-container img:hover {
     transform: scale(.98); /* Aumenta el tamaño de la imagen al pasar el mouse */
     transition: transform 0.4s ease-in-out; /* Transición suave */
-
 }
+
+.pm-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Añade un desenfoque al fondo */
+}
+  
+.pm-modal-content {
+    width: max-content;
+    max-height: 99vh;
+    border-radius: 8px;
+    box-shadow: 0 0 5px var(--color-3);
+}
+
+.pm-close {
+    position: absolute;
+    top: 2vw;
+    right: 4vw;
+    color:var(--color-3);
+    background-color: transparent;
+    border-radius: 20%;
+    font-size: 3.5vw;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.pm-close:hover {
+    color: var(--color-5); /* Cambia el color al pasar el mouse */
+    transition: color;
+    text-shadow: 0px 2px 5px var(--color-3); /* Añade un brillo al botón de cerrar */
+}
+
+/* Aumenta el tamaño de la imagen al hacer clic 
+.pm-pictures-container img:active {
+    transform: scale(1.7); /* Aumenta el tamaño de la imagen al hacer clic 
+    cursor: zoom-out; /* Cambia el cursor al hacer clic 
+    z-index: 1; /* Asegura que la imagen esté por encima de otras 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra la imagen en la pantalla 
+    width: max-content; /* Ancho de la imagen ampliada 
+    max-width: 90vw; /* Ancho máximo de la imagen ampliada 
+    height: auto; /* Altura automática para mantener la proporción 
+    max-height: 100vh;
+    margin: auto;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out; /* Transición suave 
+}
+*/
 
 .pm-project-title {
     font-family: 'Bebas Neue', sans-serif;
