@@ -273,6 +273,19 @@ iframe {
     
 }
 
+.pm-pictures-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1vw;
+    color: var(--color-5); /*color letras nav*/
+    text-align: end;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 2vw;
+    background-color: var(--color-1);
+    width: 100%;
+}	
+
 .pm-pictures-container img {
     width: max-content; /* Ancho de las imágenes */
     max-width: 100%; /* Ancho máximo de las imágenes */
