@@ -41,7 +41,16 @@ Este sitio web ha sido creado para **Joaquín Marraccini**, un director de fotog
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"      alt="Vite"       height="40" />
 </p>
 
-### Mobile & Testing  
+### Herramientas
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" style="background-color:#2D2D2D; border-radius:10px; padding:5px;" alt="Git" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" style="background-color:#2D2D2D; border-radius:10px; padding:5px;" alt="GitHub" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" height="40" style="background-color:#2D2D2D; border-radius:10px; padding:5px;" alt="ESLint" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" style="background-color:#2D2D2D; border-radius:10px; padding:5px;" alt="VS Code" />
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netlify.svg" height="40" style="background-color:#2D2D2D; border-radius:10px; padding:5px;" alt="Netlify" />
+</p>
+
+### Testing  
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"     alt="Postman"      height="40" />
 </p>
