@@ -1,6 +1,8 @@
 # Portafolio Joaquín Marraccini – Director de Fotografía
 
-<img width="1898" height="846" alt="image" src="https://github.com/user-attachments/assets/e02b2dfd-fc7c-478b-9049-aa287949ead8" />
+<img width="1898" height="845" alt="image" src="https://github.com/user-attachments/assets/7b6c8994-7349-4978-8623-2aa0a4bab629" />
+<img width="1895" height="844" alt="image" src="https://github.com/user-attachments/assets/672d2f01-fd22-42b5-bfcd-5baea8a1fef2" />
+<img width="1894" height="842" alt="image" src="https://github.com/user-attachments/assets/fc0bebdc-4eb9-479d-9675-068bad471b76" />
 <img width="1899" height="846" alt="image" src="https://github.com/user-attachments/assets/7cb73f98-47a1-44fc-bd01-f6f4fa677f30" />
 
 
