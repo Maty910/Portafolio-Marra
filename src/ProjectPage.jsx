@@ -53,7 +53,15 @@ function ProjectPage () {
   //     console.error('Error loading images:', error);
   //   }
   // }, []);
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  const handleImageClick = (src) => {
+    setSelectedImage(src);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
   return (
     <>
     <Header />
@@ -64,9 +72,22 @@ function ProjectPage () {
       <h3 className='pm-project-h3'>Stills:</h3>
       <div className="pm-stills-container">
         {images.map((image, index) => (
-          <img key={index} src={image} alt={`Imagen del proyecto ${index + 1}`} />
+          <img
+            key={index}
+            src={image}
+            alt={`Imagen del proyecto ${index + 1}`}
+            className="pm-picture"
+            onClick={() => handleImageClick(image)}
+            style={{ cursor: 'pointer' }}
+          />
         ))}
       </div>
+      {selectedImage && (
+        <div className="pm-modal" onClick={handleCloseModal}>
+          <span className="pm-close" onClick={handleCloseModal}>&times;</span>
+          <img className="pm-modal-content" src={selectedImage} alt="Vista completa" />
+        </div>
+      )}
     </>
   );
 }
