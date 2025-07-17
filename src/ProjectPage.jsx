@@ -60,7 +60,7 @@ function ProjectPage () {
       <h1 className='pm-project-title'>
         {`${formattedProjectName}`}
       </h1>
-      <p className='pm-project-details'> <b>Details about the project will go here.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, voluptates deleniti, earum dignissimos expedita consequatur blanditiis quasi officiis porro pariatur ut similique magni autem! Error facere odit assumenda itaque.</p>
+      <p className='pm-project-details'> <b>Detalles sobre el proyectos van a ir acá</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, voluptates deleniti, earum dignissimos expedita consequatur blanditiis quasi officiis porro pariatur ut similique magni autem! Error facere odit assumenda itaque.</p>
       <h3 className='pm-project-h3'>Stills:</h3>
       <div className="pm-stills-container">
         {images.map((image, index) => (

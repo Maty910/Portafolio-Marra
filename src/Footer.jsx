@@ -4,7 +4,7 @@ export function Footer () {
       <div className="pm-footer-content">
         <h2 className="pm-footer-title">Joaquín Marraccini | Director de Fotografía</h2>
         <p className="pm-footer-text">
-          ISi querés ponete en contacto, hacelo a través de:<a href="/Contact">Contact </a>
+          Si querés ponete en contacto, hacelo a través de:<a href="/Contact">Contact </a>
         </p>
         <p className="pm-footer-text">
           También podés encontrarme en Instagram: 
