@@ -13,7 +13,7 @@ export function Header () {
         <ul className="nav">
           <li className="nav-button"><Link to="/">HOME</Link></li>
           <li className="nav-button"><Link to="/projects">PROYECTOS</Link></li>
-          <li className="nav-button"><Link to="/photos">FOTOS</Link></li>
+          <li className="nav-button"><Link to="/photos">FOTOGRAFÍA</Link></li>
           <li className="nav-button"><Link to="/contact">CONTACTO </Link></li>
         </ul>
       </nav>

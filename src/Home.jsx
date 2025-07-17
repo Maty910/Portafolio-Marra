@@ -32,7 +32,7 @@ export function Home () {
           />
         </section>
         <section className="pm-projects-container">
-          <Projects projectName="Bajo la misma sombra" imgFileName="bajo la misma sombra.jpg"/>
+          <Projects projectName="La misma sombra" imgFileName="bajo la misma sombra.jpg"/>
           <Projects projectName="Intervalo" imgFileName="intervalo.jpg"/>
           <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
           <Projects projectName="Cada cosa que no sé" imgFileName="masmedula.jpg"/>

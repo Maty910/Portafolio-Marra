@@ -13,7 +13,6 @@ export function PicturesSection () {
     <>
       <Header />
         <section className="pm-pictures-section">
-          <h2 className='pm-subtitle'>Fotos:</h2>
           <div className="pm-pictures-container">
             <p className='pm-pictures-text'>Cliqueá en las imágenes para verlas en tamaño completo.</p>
             {photos.map((src, i) => (

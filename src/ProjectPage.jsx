@@ -17,7 +17,7 @@ function ProjectPage () {
           return import.meta.glob('./assets/Stills Castillos de arena/*.{png,jpg,jpeg,svg}')
         case 'cada-cosa-que-no-sé':
             return import.meta.glob('./assets/Stills ccqns/*.{png,jpg,jpeg,svg}')
-        case 'bajo-la-misma-sombra':
+        case 'la-misma-sombra':
             return import.meta.glob('./assets/Stills LMS/*.{png,jpg,jpeg,svg}')
         case 'intervalo':
             return import.meta.glob('./assets/Stills Intervalo/*.{png,jpg,jpeg,svg}')

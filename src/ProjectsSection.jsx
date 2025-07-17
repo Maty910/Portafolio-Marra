@@ -7,10 +7,9 @@ import './App.css'
 function ProjectsSection () {
   return (
     <>
-      <Header/>
-      <h2 className='pm-subtitle' >Proyectos:</h2>
+      <Header />
       <section className="pm-projects-container">
-        <Projects projectName="Bajo la misma sombra" imgFileName="bajo la misma sombra.jpg"/>
+        <Projects projectName="La misma sombra" imgFileName="bajo la misma sombra.jpg"/>
         <Projects projectName="Intervalo" imgFileName="intervalo.jpg"/>
         <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
         <Projects projectName="Cada cosa que no sé" imgFileName="masmedula.jpg"/>
