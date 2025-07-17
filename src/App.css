@@ -553,7 +553,7 @@ iframe {
 
 @media screen and (max-width: 768px) {
     .pm-header h1 {
-        font-size: 9vw; /* Ajusta el tamaño del título en pantallas pequeñas */
+        font-size: 14vw; /* Ajusta el tamaño del título en pantallas pequeñas */
     }
     
     .pm-header p {
@@ -707,6 +707,7 @@ iframe {
         width: 100%;
         height: fit-content;
         padding-top: 2vw; /* Añade espacio arriba */
+        font-weight: 200;
     }
 
     .pm-close {
@@ -738,32 +739,42 @@ iframe {
     }
 
     .pm-contact-a {
-        width: 99vw; /* Ancho del contenedor de contacto en pantallas pequeñas */
+        width: 100%; /* Ancho del contenedor de contacto en pantallas pequeñas */
         margin: 0 auto; /* Elimina el margen derecho en pantallas pequeñas */
         text-align: center; /* Centra el texto en pantallas pequeñas */
-        font-size: 3vw; /* Ajusta el tamaño del texto en pantallas pequeñas */
     }
 
     .pm-contact-a a {
-        font-size: 3vw; /* Ajusta el tamaño del enlace en pantallas pequeñas */
+        font-size: 4vw; /* Ajusta el tamaño del enlace en pantallas pequeñas */
         text-decoration: none; /* Elimina el subrayado del enlace */
     }
    
     .pm-footer {
         flex-direction: column; /* Cambia a columna en pantallas pequeñas */
         align-items: center; /* Centra los elementos en el eje horizontal */
-        padding: 1vw; /* Añade espacio alrededor del footer */
+        padding: 0vw; /* Añade espacio alrededor del footer */
+        height: 40vw;
     }
 
-    .pm-footer-text, .pm-footer h2, .pm-footer-dev {
-        font-size: 3vw; /* Ajusta el tamaño del texto en pantallas pequeñas */
-        text-align: center; /* Centra el texto en pantallas pequeñas */
-        margin-top: 1vw; /* Añade espacio arriba */
-        margin-bottom: 1vw; /* Añade espacio abajo */
+    .pm-footer-text {
+        font-size: 4dvw; /* Ajusta el tamaño del texto en pantallas pequeñas */
+        text-align: start; /* Centra el texto en pantallas pequeñas */
+        margin-top: 1dvw; /* Añade espacio arriba */
+        margin-bottom: 1dvw; /* Añade espacio abajo */
     }
 
     .pm-footer a {
-        font-size: 3vw; /* Ajusta el tamaño del enlace en pantallas pequeñas */
+        font-size: 4dvw; /* Ajusta el tamaño del enlace en pantallas pequeñas */
         text-decoration: none; /* Elimina el subrayado del enlace */
+    }
+
+    .pm-footer-title {
+        padding-bottom: 2dvh;
+        padding-top: 2dvh;
+    }
+
+    .pm-footer-dev {
+        padding-bottom: 4dvw;
+        padding-top: 4dvw;
     }
 }
