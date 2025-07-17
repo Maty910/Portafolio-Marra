@@ -159,6 +159,17 @@ main {
     object-position: center;
     border-radius: 10px; /*borde de c/ proyecto*/
 }
+
+.pm-project-image img:first-child {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.pm-project-image img:nth-child(2) {
+    object-fit: cover;
+    aspect-ratio: 15/8;
+}
+
 .pm-project-image:hover {
     transform: scale(1.1); /*aumenta el tamaño de la imagen al pasar el mouse*/
     transition: transform 0.5s ease-in-out;

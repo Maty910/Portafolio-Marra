@@ -22,10 +22,10 @@ export function Home () {
         ></iframe>
         </section>
         <section className="pm-projects-container">
+          <Projects projectName="Bajo la misma sombra" imgFileName="bajo la misma sombra.jpg"/>
+          <Projects projectName="Intervalo" imgFileName="intervalo.jpg"/>
           <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
           <Projects projectName="Cada cosa que no sé" imgFileName="masmedula.jpg"/>
-          <Projects projectName="a       Valen __________aa" imgFileName="valen foto.jpg"/>
-          <Projects projectName="Foto Naranja" imgFileName="paisaje.jpg"/>
           <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
           <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
         </section>

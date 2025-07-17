@@ -26,7 +26,7 @@ export function App () {
             element={<ProjectsSection />}
           /> {/* Sección de proyectos */}
         <Route
-            path="/pictures"
+            path="/photos"
             element={<PicturesSection />}
           /> {/* Sección de fotografías */}
         <Route

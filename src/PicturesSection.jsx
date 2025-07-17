@@ -7,16 +7,16 @@ import {useState} from 'react'
 export function PicturesSection () {
   const [selectedPicture, setSelectedPicture] = useState(null)
 
-  const pictures = Array.from({ length: 10} , (_, i) => `/pictures/${i + 1}.jpg`)
+  const photos = Array.from({ length: 10} , (_, i) => `/photos/${i + 1}.jpg`)
 
   return (
     <>
       <Header />
         <section className="pm-pictures-section">
-          <h2 className='pm-subtitle'>Pictures:</h2>
+          <h2 className='pm-subtitle'>Photos:</h2>
           <div className="pm-pictures-container">
             <p className='pm-pictures-text'>Click on the images to see them in full size.</p>
-            {pictures.map((src, i) => (
+            {photos.map((src, i) => (
               <img
                 key={i}
                 src={src}
