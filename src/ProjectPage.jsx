@@ -112,7 +112,7 @@ function ProjectPage () {
           <iframe
             width="1000"
             // height="700"
-            src="https://www.youtube.com/watch?v=F8fFVuaMbu8"
+            src="https://www.youtube.com/embed/F8fFVuaMbu8"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -131,7 +131,7 @@ function ProjectPage () {
           <iframe
             width="1000"
             // height="700"
-            src="https://www.youtube.com/watch?v=l2T53phSMQM&t=405s"
+            src="https://www.youtube.com/embed/l2T53phSMQM?start=405"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
