@@ -219,8 +219,8 @@ a {
 }
 
 iframe {
-    width: 100vw;
-    height: content;
+    width: 100dvw;
+    height: 100dvh;
     background: none;
     border-radius: 10px;
     object-fit: cover;

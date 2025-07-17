@@ -29,7 +29,6 @@ export function Home () {
             // poster="/videos/video-poster.jpg" // opcional, imagen de portada
             preload="1"
             name="reel"
-            style={{alignItem: "center"}}
           />
         </section>
         <section className="pm-projects-container">
@@ -37,8 +36,6 @@ export function Home () {
           <Projects projectName="Intervalo" imgFileName="intervalo.jpg"/>
           <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
           <Projects projectName="Cada cosa que no sé" imgFileName="masmedula.jpg"/>
-          <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
-          <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
         </section>
       </main>
       <Footer />
