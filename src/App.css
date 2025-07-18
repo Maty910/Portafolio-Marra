@@ -40,64 +40,95 @@ img {
 }
 
 .pm-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    width: 100%;
-    height: 10vh;
-    padding-top: 8.5vh;
-    padding-bottom: 8.5vh;
-    top: 40%;
-    position: absolute;
-    z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  height: 10vh;
+  padding-top: 8.5vh;
+  padding-bottom: 8.5vh;
+  top: 40%;
+  position: fixed;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.pm-header.scrolled {
+  top: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: auto;
+  background-color: transparent;
+  backdrop-filter: blur(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pm-header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .pm-header h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4vw;
-    color: var(--color-5); /*color letras nav*/
-    text-align: center;
-    justify-content: center;
-    letter-spacing: 1vw;
-    backdrop-filter: blur(1px)
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4vw;
+  color: var(--color-5);
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 1vw;
+  backdrop-filter: blur(1px);
+  margin: 0;
+  transition: all 0.3s ease;
 }
 
-/* .pm-header h1:hover {
-    transition: color 0.3s ease; Transición suave 
-} */
-
-.pm-header p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.7vw;
-    color: var(--color-5); /*color letras nav*/
-    text-align: center;
-    justify-content: center;
-    margin-top: -1vw;
-    backdrop-filter: blur(1px)
+.pm-header.scrolled h1 {
+  font-size: 3vw;
+  color: var(--color-5);
+  letter-spacing: 0.8vw;
 }
 
 .pm-header a {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1vw;
-    text-decoration: none;
-    padding: 2px;  
-    color: var(--color-5); /*color letras nav*/
-    backdrop-filter: blur(1px)
+  font-family: "Montserrat", sans-serif;
+  font-size: 1vw;
+  text-decoration: none;
+  padding: 2px;  
+  color: var(--color-5);
+  backdrop-filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+.pm-header.scrolled a {
+  color: var(--color-5);
+}
+
+.pm-header a:hover {
+  color: var(--color-4);
 }
 
 .pm-header ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    display: flex; /* Muestra los elementos en línea */
-    gap: 9vw; /* Espacio entre los elementos */
-    justify-content: center;
-    color: var(--color-5); 
+  list-style: none;
+  display: flex;
+  gap: 9vw; /* Mantiene tu espaciado original */
+  justify-content: center;
+  color: var(--color-5);
+  margin: 0;
+  padding: 0;
+}
+
+.pm-header.scrolled ul {
+  color: #1f2937;
+  gap: 9vw; /* Mantiene el mismo espacio original */
 }
 
 .pm-header ul li {
-    display: inline-block; /* Asegura que los elementos estén en línea */
-    backdrop-filter: blur(1px)
+  display: inline-block;
+  backdrop-filter: blur(1px);
 }
 
 main {
@@ -125,7 +156,7 @@ main {
 
 .pm-reel-container video {
     width: 100%;
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/9; */
 }
 
 .pm-projects-container {

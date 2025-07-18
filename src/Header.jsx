@@ -1,22 +1,32 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// Component that renders the header of the page with a logo and a navigation bar
+export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-export function Header () {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="pm-header">
+    <header className={`pm-header ${isScrolled ? 'scrolled' : ''}`}>
       <nav>
         <div className="logo">
           <h1>Joaquín Marraccini</h1>
-          {/* <p>Dir. de Fotografía</p> */}
         </div>
         <ul className="nav">
           <li className="nav-button"><Link to="/">HOME</Link></li>
           <li className="nav-button"><Link to="/projects">PROYECTOS</Link></li>
           <li className="nav-button"><Link to="/photos">FOTOGRAFÍA</Link></li>
-          <li className="nav-button"><Link to="/contact">CONTACTO </Link></li>
+          <li className="nav-button"><Link to="/contact">CONTACTO</Link></li>
         </ul>
       </nav>
     </header>
-  )
+  );
 }
