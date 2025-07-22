@@ -55,6 +55,19 @@ img {
   transition: all 0.3s ease;
 }
 
+/* Header fijo en el top para todas las secciones excepto home */
+.pm-header.fixed-top {
+  top: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: auto;
+  background-color: transparent;
+  backdrop-filter: blur(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 .pm-header.scrolled {
   top: 0;
   padding-top: 1rem;
@@ -87,7 +100,8 @@ img {
   transition: all 0.3s ease;
 }
 
-.pm-header.scrolled h1 {
+.pm-header.scrolled h1,
+.pm-header.fixed-top h1 {
   font-size: 3vw;
   color: var(--color-5);
   letter-spacing: 0.8vw;
@@ -97,13 +111,14 @@ img {
   font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   text-decoration: none;
-  padding: 2px;  
+  padding: 2px;
   color: var(--color-5);
   backdrop-filter: blur(1px);
   transition: all 0.3s ease;
 }
 
-.pm-header.scrolled a {
+.pm-header.scrolled a,
+.pm-header.fixed-top a {
   color: var(--color-5);
 }
 
@@ -114,21 +129,28 @@ img {
 .pm-header ul {
   list-style: none;
   display: flex;
-  gap: 9vw; /* Mantiene tu espaciado original */
+  gap: 9vw;
   justify-content: center;
   color: var(--color-5);
   margin: 0;
   padding: 0;
 }
 
-.pm-header.scrolled ul {
+.pm-header.scrolled ul,
+.pm-header.fixed-top ul {
   color: #1f2937;
-  gap: 9vw; /* Mantiene el mismo espacio original */
+  gap: 9vw;
 }
 
 .pm-header ul li {
   display: inline-block;
   backdrop-filter: blur(1px);
+}
+
+/* Espaciador para compensar el header fijo en secciones que no sean home */
+.header-spacer {
+  height: calc(10vh + 17vh); /* altura del header + padding */
+  width: 100%;
 }
 
 main {
@@ -590,6 +612,49 @@ iframe {
 }
 
 @media screen and (max-width: 768px) {
+    .pm-header {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .pm-header.scrolled {
+        position: absolute;
+        top: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        height: auto;
+        background-color: black;
+        backdrop-filter: blur(1px);
+        box-shadow: none; /* Elimina la sombra en pantallas pequeñas */
+    }
+
+    .pm-header.fixed-top {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .pm-header.fixed-top ul {
+        flex-direction: row;
+        gap: 4vw;
+    }
+
+    .header-spacer {
+        display: none;
+    }
+
+    .pm-header.fixed-top h1 {
+        font-size: 14vw; /* Ajusta el tamaño del título en pantallas pequeñas */
+        letter-spacing: 1vw;
+    }
+
     .pm-header h1 {
         font-size: 14vw; /* Ajusta el tamaño del título en pantallas pequeñas */
     }

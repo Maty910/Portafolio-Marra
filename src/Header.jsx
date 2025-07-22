@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,12 +15,33 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Determinar si estamos en home
+  const isHome = location.pathname === '/';
+  
+  // Determinar las clases del header
+  const getHeaderClass = () => {
+    let classes = 'pm-header';
+    
+    if (isHome) {
+      // En home: solo aplicar scrolled si se hizo scroll
+      if (isScrolled) {
+        classes += ' scrolled';
+      }
+    } else {
+      // En otras secciones: siempre fijo en top
+      classes += ' fixed-top';
+    }
+    
+    return classes;
+  };
+
   return (
-    <header className={`pm-header ${isScrolled ? 'scrolled' : ''}`}>
-      <nav>
-        <div className="logo">
-          <h1>Joaquín Marraccini</h1>
-        </div>
+    <>
+      <header className={getHeaderClass()}>
+        <nav>
+          <div className="logo">
+            <h1>Joaquín Marraccini</h1>
+          </div>
         <ul className="nav">
           <li className="nav-button"><Link to="/">HOME</Link></li>
           <li className="nav-button"><Link to="/projects">PROYECTOS</Link></li>
@@ -27,6 +49,10 @@ export function Header() {
           <li className="nav-button"><Link to="/contact">CONTACTO</Link></li>
         </ul>
       </nav>
-    </header>
+      </header>
+      
+      {/* Espaciador solo para secciones que no sean home */}
+      {!isHome && <div className="header-spacer"></div>}
+    </>
   );
 }
