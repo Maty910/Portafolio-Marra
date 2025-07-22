@@ -8,7 +8,7 @@ export function Contact () {
     <Header />
     <section className="pm-contact-section">
       <div className="pm-contact-container">
-        <p className='pm-contact-a'>Si querés ponete en contacto, hacelo a través de: <br /> <b>joaquinmarraccini@gmail.com</b></p>
+        <p className='pm-contact-a'>Si querés ponete en contacto, hacelo a través de: <br /> <b>marraccinijoaquin@gmail.com</b></p>
         <p className='pm-contact-a'>También podés encontrarme en Instagram<a href="https://www.instagram.com/joaco_marra/" target="_blank" rel="noopener noreferrer"><b>@joaco_marra</b></a></p>
       </div>
       <div className="pm-contact-container">
