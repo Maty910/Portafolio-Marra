@@ -832,8 +832,11 @@ iframe {
         grid-auto-rows: auto; /* Filas automáticas según el contenido */
         gap: 1vw; /* Espaciado entre columnas y filas */
         padding: 0.5vw; /* Espacio entre el contenedor y los proyectos */
+        padding-left: 5dvw;
+        padding-right: 5dvw;
         width: 100%; /* Ancho completo del contenedor */
         height: fit-content; /* Ajusta la altura del contenedor */
+        margin: 2dvh auto ;
     }
 
     .pm-contact-location {
@@ -846,7 +849,7 @@ iframe {
     .pm-contact-a {
         width: 100%; /* Ancho del contenedor de contacto en pantallas pequeñas */
         margin: 0 auto; /* Elimina el margen derecho en pantallas pequeñas */
-        text-align: center; /* Centra el texto en pantallas pequeñas */
+        text-align: left /* Centra el texto en pantallas pequeñas */
     }
 
     .pm-contact-a a {
