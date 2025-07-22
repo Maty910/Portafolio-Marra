@@ -401,6 +401,7 @@ iframe {
     width: 85vw;
     max-height: 99vh;
     border-radius: 8px;
+    object-fit: contain;
 }
 
 .pm-close {
@@ -790,14 +791,15 @@ iframe {
         width: 99vw; /* Ancho del modal en pantallas pequeñas */
         max-height: 99vh; /* Altura máxima del modal en pantallas pequeñas */
         overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es demasiado grande */
-        border-radius: 10px; /* Borde redondeado */        
+        border-radius: 10px; /* Borde redondeado */  
+        object-fit: contain;      
     }
     
     .pm-modal-content img {
         width: 100%; /* Ancho completo de la imagen en el modal */
         height: auto; /* Altura automática para mantener la proporción */
         border-radius: 10px; /* Borde redondeado */
-        object-fit: cover; /* Ajusta la imagen al contenedor manteniendo su proporción */
+        object-fit: contain; /* Ajusta la imagen al contenedor manteniendo su proporción */
         object-position: center; /* Centra la imagen dentro del contenedor */
     }
 
