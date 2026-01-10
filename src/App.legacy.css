@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-1: #000000;
+    --dark-blue: #050315;
+    --color-2: #6a6a6a;
+    --color-3: #de0bd7;
+    --color-4: #b5b5b5;
+    --color-5: #f2f2f2;
+}
+
+#root {
+    background-color: var(--color-1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+   width: 100%;
+   background-color: var(--color-1);
+}
+
+body {
+    width: 100%;
+    background-color: var(--color-1);
+ }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header styles migrated to Tailwind — legacy rules removed */
+
+main {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: auto auto; */
+    gap: .5vw;
+    /* padding: 0.5vw; */
+    background-color: var(--color-1);
+    width: 100%;
+}
+
+/* Reel container migrated to Tailwind — legacy rules removed */
+
+/* Project tiles migrated to Tailwind — legacy rules removed */
+
+a {
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5vw;
+    text-decoration: none;
+    padding: 2px;  
+    color:var(--color-5) /*color letras nav*/
+}
+
+iframe {
+    width: 100dvw;
+    height: 100dvh;
+    background: none;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    margin: 0.5vw auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/* Header nav styles migrated to Tailwind */
+
+/* Main/project subtitles migrated to Tailwind — legacy rules removed */
+
+/* Pictures & modal migrated to Tailwind — legacy rules removed */
+
+/* Project page styles migrated to Tailwind — legacy rules removed */
+
+/* Contact styles migrated to Tailwind — legacy rules removed */
+
+/* Footer migrated to Tailwind — legacy rules removed */
+
+@media screen and (max-width: 768px) {
+    /* Header mobile rules removed */
+
+    /* Mobile rules for header/projects removed (migrated to Tailwind) */
+    iframe {
+        width: 99vw; /* Ancho del iframe en pantallas pequeñas */
+        height: 50vh; /* Altura del iframe en pantallas pequeñas */
+        border-radius: 10px; /* Borde redondeado */
+        object-fit: cover; /* Ajusta el iframe al contenedor manteniendo su proporción */
+        object-position: center; /* Centra el iframe dentro del contenedor */
+    }
+
+    /* Mobile footer rules removed (footer migrated to Tailwind) */
+}
+
+.h1-span {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 4vw;
+        color: var(--color-5);
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 1vw;
+        backdrop-filter: blur(1px);
+        margin: 0;
+        transition: all 0.3s ease;
+        font-family: 'Bebas Neue', sans-serif;
+        color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }

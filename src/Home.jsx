@@ -1,5 +1,5 @@
 import { Projects } from './Projects'
-import './App.css'
+import './index.css'
 import { Header} from './Header.jsx'
 import { Footer} from './Footer.jsx'
 
@@ -17,21 +17,20 @@ export function Home () {
   return (
     <>
       <Header />
-      <main>
-        <section className="pm-reel-container">
-          {/* Video local con autoplay */}
+      <main className="bg-black w-full">
+        <section className="relative flex justify-center w-full bg-black rounded-lg overflow-hidden backdrop-blur-[14px]">
           <video
+            className="w-full"
             src="/videos/reel.mp4"
             muted
             autoPlay
-            width="1000"
-            height="auto"
-            // poster="/videos/video-poster.jpg" // opcional, imagen de portada
-            preload="1"
+            // poster="/videos/video-poster.jpg"
+            preload="auto"
             name="reel"
           />
         </section>
-        <section className="pm-projects-container">
+
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-0 place-self-center bg-black w-full p-2">
           <Projects projectName="La misma sombra" imgFileName="bajo la misma sombra.jpg"/>
           <Projects projectName="Intervalo" imgFileName="intervalo.jpg"/>
           <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>

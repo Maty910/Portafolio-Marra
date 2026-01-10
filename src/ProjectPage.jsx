@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-import './ProjectPage.css'
 import { Header } from './Header.jsx'
 import { Footer } from './Footer.jsx'
 
@@ -66,80 +65,82 @@ function ProjectPage () {
   return (
     <>
       <Header />
-      <h1 className='pm-project-title'>
-        {`${formattedProjectName}`}
-      </h1>
-      <p className='pm-project-details'>
-        <b>Detalles sobre el proyectos van a ir acá</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, voluptates deleniti, earum dignissimos expedita consequatur blanditiis quasi officiis porro pariatur ut similique magni autem! Error facere odit assumenda itaque.
+      <h1 className="text-center text-white text-4xl md:text-6xl font-bebas h1-span my-6">{formattedProjectName}</h1>
+
+      <p className="max-w-4xl mx-auto text-white text-base md:text-lg px-4">
+        <strong>Detalles sobre el proyectos van a ir acá</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, voluptates deleniti, earum dignissimos expedita consequatur blanditiis quasi officiis porro pariatur ut similique magni autem! Error facere odit assumenda itaque.
       </p>
-      <h3 className='pm-project-h3'>Stills:</h3>
-      <div className="pm-stills-container">
+
+      <h3 className="text-white text-2xl md:text-3xl mt-6 mb-4 px-4">Stills:</h3>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2 mb-6 p-2 bg-black">
         {images.map((image, index) => (
-          <img
+          <button
             key={index}
-            src={image}
-            alt={`Imagen del proyecto ${index + 1}`}
-            className="pm-picture"
             onClick={() => handleImageClick(image)}
-            style={{ cursor: 'pointer' }}
-          />
+            className="w-full block rounded-lg overflow-hidden focus:outline-none"
+            aria-label={`Abrir imagen ${index + 1}`}
+          >
+            <img src={image} alt={`Imagen del proyecto ${index + 1}`} className="w-full h-[40vw] md:h-[26vw] object-cover transition-transform duration-500 hover:scale-105" />
+          </button>
         ))}
       </div>
+
       {selectedImage && (
-        <div className="pm-modal" onClick={handleCloseModal}>
-          <span className="pm-close" onClick={handleCloseModal}>&times;</span>
-          <img className="pm-modal-content" src={selectedImage} alt="Vista completa" />
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center" onClick={handleCloseModal}>
+          <button className="absolute top-6 right-6 text-4xl text-gray-300 hover:text-white" onClick={handleCloseModal} aria-label="Cerrar modal">&times;</button>
+          <img src={selectedImage} alt="Vista completa" className="max-w-[85vw] max-h-[90vh] rounded" />
         </div>
       )}
 
+      {/* Iframe responsivo por proyecto */}
       {formattedProjectName === 'castillo de arena' && (
-        <>
-          <iframe
-            width="1000"
-            // height="700"
-            src="https://www.youtube.com/embed/kdsB5FriV-0?start=172"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="YouTube video"
-          ></iframe>
-          <Footer />
-        </>
+        <div className="w-full px-4 mt-6">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full rounded"
+              src="https://www.youtube.com/embed/kdsB5FriV-0?start=172"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="YouTube video"
+            />
+          </div>
+        </div>
       )}
 
       {formattedProjectName === 'cada cosa que no sé' && (
-        <>
-          <iframe
-            width="1000"
-            // height="700"
-            src="https://www.youtube.com/embed/F8fFVuaMbu8"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="YouTube video"
-          ></iframe>
-          <Footer />
-        </>
-      )}
-
-      {formattedProjectName === 'bajo la misma sombra' && (
-        <Footer />
+        <div className="w-full px-4 mt-6">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full rounded"
+              src="https://www.youtube.com/embed/F8fFVuaMbu8"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="YouTube video"
+            />
+          </div>
+        </div>
       )}
 
       {formattedProjectName === 'intervalo' && (
-        <>
-          <iframe
-            width="1000"
-            // height="700"
-            src="https://www.youtube.com/embed/l2T53phSMQM?start=405"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="YouTube video"
-          ></iframe>
-          <Footer />
-        </>
+        <div className="w-full px-4 mt-6">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full rounded"
+              src="https://www.youtube.com/embed/l2T53phSMQM?start=405"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="YouTube video"
+            />
+          </div>
+        </div>
       )}
+
+      {/* Footer global */}
+      <Footer />
 
       {/* Puedes agregar más condiciones para otros proyectos aquí */}
     </>

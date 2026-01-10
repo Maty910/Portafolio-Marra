@@ -1,13 +1,65 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
+/* 1. Importamos las fuentes de Google primero */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 2. Importamos Tailwind v4 */
+@import "tailwindcss";
+
+/* 3. Configuración del Tema (Reemplaza a tailwind.config.js) */
+@theme {
+  /* Fuentes personalizadas */
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Colores personalizados (pm-black, pm-gray, etc.) */
+  --color-pm-black: #000000;
+  --color-pm-gray: #6a6a6a;
+  --color-pm-white: #f2f2f2;
+}
+
+/* 4. Estilos Base y Legacy (Lo que tenías en App.css) */
+
+/* Mantenemos tus variables CSS nativas por si las usás en otro lado,
+   pero ahora apuntan a los valores de Tailwind para ser consistentes */
+:root {
+  --color-1: var(--color-pm-black);
+  --color-2: var(--color-pm-gray);
+  --color-5: var(--color-pm-white);
+  
+  font-family: var(--font-inter);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-pm-white);
+  background-color: var(--color-pm-black);
 }
 
 body {
-    background: #101010;
-    font-family: 'Segoe UI',;
-    display: grid;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Aseguramos que el body use tus colores por defecto */
+  background-color: var(--color-pm-black);
+  color: var(--color-pm-white);
 }
 
+/* Clases específicas que tenías en App.css (migradas a Tailwind layer) */
+@layer components {
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Esto asegura que si usás la clase .h1-span siga funcionando */
+  .h1-span {
+    font-family: var(--font-bebas);
+  }
+}
 
-
+/* Utilidades de respaldo (legacy) */
+.font-bebas { font-family: var(--font-bebas); }
+.font-montserrat { font-family: var(--font-montserrat); }
+.font-inter { font-family: var(--font-inter); }

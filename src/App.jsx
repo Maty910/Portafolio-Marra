@@ -4,8 +4,9 @@ import ProjectPage from './ProjectPage.jsx'
 import ProjectsSection from './ProjectsSection.jsx'
 import PicturesSection from './PicturesSection.jsx'
 import Contact from './Contact.jsx'
+import Extras from './Extras.jsx'
 
-import './App.css'
+import './index.css'
 import { Home } from './Home.jsx'
 
 export function App () {
@@ -29,6 +30,8 @@ export function App () {
             path="/photos"
             element={<PicturesSection />}
           /> {/* Sección de fotografías */}
+        <Route path="/extras" element={<Extras />} 
+          /> {/* Sección de extras */}
         <Route
             path="/contact"
             element={<Contact />}
