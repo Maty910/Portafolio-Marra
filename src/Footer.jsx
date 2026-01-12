@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-black text-white py-12 border-t border-white/10 relative z-10">
+    <footer className="bg-black text-white py-12 border-t border-white/10 relative z-10 selection:bg-yellow-400 selection:text-black fade-in">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
         
         {/* IZQUIERDA: Identidad */}
