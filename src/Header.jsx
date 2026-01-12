@@ -9,7 +9,7 @@ export function Header() {
   // Usamos el estado global
   const { hasAnimated, setHasAnimated } = useBrand();
   
-  // Si ya animó antes (hasAnimated es true), arrancamos la animación terminada (true).
+  // Si ya animó antes, arrancamos terminados
   const [animateBrand, setAnimateBrand] = useState(hasAnimated);
 
   useEffect(() => {
@@ -21,17 +21,15 @@ export function Header() {
 
     // 2. Animación Inteligente
     if (!hasAnimated) {
-      // Si es la primera vez, esperamos el delay y luego animamos
       const timer = setTimeout(() => {
         setAnimateBrand(true);
-        setHasAnimated(true); // Marcamos globalmente que ya pasó
+        setHasAnimated(true);
       }, 1000);
       return () => {
         window.removeEventListener('scroll', handleScroll);
         clearTimeout(timer);
       };
     } else {
-      // Si ya animó, aseguramos que esté en el estado final
       setAnimateBrand(true);
     }
     
@@ -41,14 +39,18 @@ export function Header() {
   const isHome = location.pathname === '/';
   
   const getHeaderClass = () => {
+    // Definimos la base y la transición de posición
     const base = 'fixed w-full z-50 transition-all duration-1000 ease-in-out flex justify-center items-center';
 
     if (isHome) {
       if (isScrolled) {
+        // Estado Scrolled: Fondo negro, padding chico, arriba
         return `${base} top-0 py-3 backdrop-blur-md bg-black/90 shadow-lg`;
       }
+      // Estado Inicial Home: Centrado verticalmente
       return `${base} top-1/2 transform -translate-y-1/2 py-4`;
     }
+    // Otras páginas: Siempre arriba
     return `${base} top-0 py-3 backdrop-blur-md bg-black/90 shadow-lg`;
   };
 
@@ -56,7 +58,6 @@ export function Header() {
   const staggeredTransition = {
     transitionProperty: 'max-width, opacity, filter',
     transitionDuration: '6000ms, 1500ms, 1500ms', 
-    // Si ya animó, quitamos el delay para que no haya parpadeos al navegar
     transitionDelay: hasAnimated ? '0ms' : '1000ms, 0ms, 0ms', 
     transitionTimingFunction: 'ease-in-out, ease-out, ease-out'
   };
@@ -81,12 +82,15 @@ export function Header() {
         <nav className="w-full max-w-7xl flex flex-col items-center text-center px-4 md:px-6 overflow-hidden">
           
           {/* LOGO / NOMBRE */}
-          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-15 md:min-h-25">
-            {/* FIX MOBILE: text-[13vw] y tracking-wide para que entre perfecto */}
-            <h1 className={`font-bebas leading-none whitespace-nowrap select-none flex justify-center items-end
-                ${isScrolled 
-                  ? 'text-[3rem] md:text-[3.5rem] tracking-wider' 
-                  : 'text-[13vw] md:text-[7rem] tracking-wide md:tracking-widest'}`}>
+          {/* Ajustamos el min-h para que no salte el layout */}
+          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-15 md:min-h-20">
+            
+            {/* TAMAÑO UNIFICADO:
+                - Mobile: text-[10vw] (grande pero seguro para que entre el nombre completo)
+                - Desktop: text-[3.5rem] (el tamaño "navbar" que queda elegante)
+                - Ya no usamos isScrolled para cambiar el tamaño, así no hay saltos.
+            */}
+            <h1 className="font-bebas leading-none whitespace-nowrap select-none flex justify-center items-end text-[10vw] md:text-[3.5rem] tracking-widest">
               
               <span className={fadedClass} style={staggeredTransition}>
                 JOAQUÍN&nbsp;
@@ -106,7 +110,7 @@ export function Header() {
           <ul className={`flex gap-4 md:gap-10 justify-center items-center list-none w-full flex-wrap transition-all duration-1000
               ${isScrolled ? 'opacity-100 mt-0' : 'opacity-80 mt-2 md:mt-4'}`}>
             
-            {['HOME', 'PROJECTS', 'IMAGES', 'EXTRAS', 'CONTACT'].map((item) => (
+            {['HOME', 'PROJECTS', 'IMAGES', 'EXPERIENCE', 'CONTACT'].map((item) => (
               <li key={item}>
                 <Link 
                   className="text-white/60 hover:text-white transition-colors duration-500 no-underline uppercase text-[10px] md:text-xs tracking-[0.2em] font-montserrat font-bold" 
