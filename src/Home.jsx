@@ -1,43 +1,146 @@
-import { Projects } from './Projects'
-import './index.css'
-import { Header} from './Header.jsx'
-import { Footer} from './Footer.jsx'
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Header } from './Header.jsx';
+import { Footer } from './Footer.jsx';
+import { Projects } from './Projects.jsx';
 
-export function Home () {
-  // Puedes agregar un video de varias formas:
-  // 1. Usar un <iframe> para incrustar desde YouTube (como ya tienes).
-  // 2. Usar la etiqueta <video> para mostrar un archivo mp4 local o remoto.
+export function Home() {
+  
+  // Datos de ejemplo para los proyectos destacados
+  const featuredProjects = [
+    { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: "Fiction" },
+    { name: "Intervalo", img: "intervalo.jpg", cat: "Fiction" },
+    { name: "Castillo de arena", img: "castillo de arena.jpg", cat: "Documentary" },
+    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: "Video Art" },
+  ];
 
-  // Si tienes el archivo mp4 en tu proyecto (por ejemplo, en /public/videos/video.mp4), puedes usar:
-  // <video src="/videos/video.mp4" controls width="733" height="412" />
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  // Usar un archivo mp4 local te da más control (sin anuncios, sin sugerencias de YouTube, etc.), pero aumenta el peso de tu proyecto y el ancho de banda necesario.
-
-  // Ejemplo reemplazando el iframe por un video local:
   return (
-    <>
+    <div className="bg-black min-h-screen text-white fade-in relative font-sans">
       <Header />
-      <main className="bg-black w-full">
-        <section className="relative flex justify-center w-full bg-black rounded-lg overflow-hidden backdrop-blur-[14px]">
-          <video
-            className="w-full"
-            src="/videos/reel.mp4"
-            muted
-            autoPlay
-            // poster="/videos/video-poster.jpg"
-            preload="auto"
-            name="reel"
-          />
-        </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-0 place-self-center bg-black w-full p-2">
-          <Projects projectName="La misma sombra" imgFileName="bajo la misma sombra.jpg"/>
-          <Projects projectName="Intervalo" imgFileName="intervalo.jpg"/>
-          <Projects projectName="Castillo de arena" imgFileName="castillo de arena.jpg"/>
-          <Projects projectName="Cada cosa que no sé" imgFileName="masmedula.jpg"/>
-        </section>
-      </main>
+      {/* --- 1. REEL SECTION (100% Pantalla) --- */}
+      <section className="relative w-full h-screen overflow-hidden">
+        <video 
+          autoPlay loop muted playsInline 
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/video/reel.mp4" type="video/mp4" />
+          <img src="/img/reel-poster.jpg" alt="Reel Background" className="w-full h-full object-cover" />
+        </video>
+
+        <div className="absolute inset-0 bg-black/30 z-10" />
+
+        <div className="absolute bottom-10 left-0 w-full z-20 flex justify-center animate-bounce">
+           <div className="text-white/50 flex flex-col items-center gap-2">
+            <span className="font-montserrat text-[10px] tracking-[0.3em] uppercase">Scroll Down</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      {/* --- 2. FEATURED PROJECTS --- */}
+      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
+        
+        <div className="mb-12 border-b border-white/10 pb-6">
+          <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block">
+            — Selected Work —
+          </span>
+          <h2 className="font-bebas text-4xl md:text-5xl tracking-widest text-white leading-none">
+            LATEST PROJECTS
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          {featuredProjects.map((proj, i) => (
+            <Projects 
+              key={i}
+              projectName={proj.name}
+              imgFileName={proj.img}
+              category={proj.cat}
+            />
+          ))}
+        </div>
+
+        <div className="mt-16 flex justify-center">
+          <Link 
+            to="/projects" 
+            className="group border border-white/20 px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 rounded-sm"
+          >
+            <span className="font-montserrat text-xs tracking-[0.3em] uppercase font-bold group-hover:tracking-[0.4em] transition-all">
+              View All Projects
+            </span>
+          </Link>
+        </div>
+
+      </section>
+
+      {/* --- 3. ABOUT ME SECTION (NUEVA) --- */}
+      <section className="py-20 bg-gray-900 border-t border-white/5 relative z-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            
+            {/* IMAGEN DE PERFIL (Izquierda en desktop, arriba en mobile) */}
+            <div className="md:col-span-5 relative group">
+              <div className="aspect-[3/4] w-full overflow-hidden rounded-sm relative">
+                {/* ⚠️ Reemplazá 'profile.jpg' con tu foto real en /img/ */}
+                <img 
+                  src="/img/profile.jpg" 
+                  alt="Joaquín Marraccini" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
+                />
+                {/* Marco decorativo */}
+                <div className="absolute inset-0 border border-white/10 group-hover:border-yellow-400/50 transition-colors duration-500 pointer-events-none" />
+              </div>
+            </div>
+
+            {/* TEXTO (Derecha) */}
+            <div className="md:col-span-7 md:pl-8">
+              <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4 block">
+                — Perfil —
+              </span>
+              
+              <h2 className="font-bebas text-4xl md:text-6xl tracking-widest text-white leading-none mb-6">
+                ABOUT ME
+              </h2>
+
+              <div className="font-montserrat text-white/80 text-sm md:text-base leading-loose space-y-4 tracking-wide text-justify md:text-left">
+                <p>
+                  Soy <strong className="text-white">Joaquín Marraccini</strong>, director de fotografía y colorista.
+                </p>
+                <p>
+                  Mi enfoque se centra en la narrativa visual, utilizando la luz y el color para potenciar la historia.
+                </p>
+                <p>
+                  Con experiencia en publicidad, videoclips y ficción, busco siempre la mejor calidad estética y técnica en cada proyecto.
+                </p>
+              </div>
+
+              {/* Botón de Contacto */}
+              <div className="mt-8">
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center gap-2 text-yellow-400 hover:text-white transition-colors duration-300 font-montserrat text-xs tracking-[0.2em] uppercase font-bold"
+                >
+                  <span>Lets Talk</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
