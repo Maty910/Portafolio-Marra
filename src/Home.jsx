@@ -28,14 +28,14 @@ export function Home() {
           autoPlay loop muted playsInline 
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="/video/reel.mp4" type="video/mp4" />
-          <img src="/img/reel-poster.jpg" alt="Reel Background" className="w-full h-full object-cover" />
+          <source src="public\videos\reel.mp4" type="video/mp4" />
+          <img src="public\videos\reel.mp4" alt="Reel Background" className="w-full h-full object-cover" />
         </video>
 
         <div className="absolute inset-0 bg-black/30 z-10" />
 
         <div className="absolute bottom-10 left-0 w-full z-20 flex justify-center animate-bounce">
-           <div className="text-white/50 flex flex-col items-center gap-2">
+          <div className="text-white/50 flex flex-col items-center gap-2">
             <span className="font-montserrat text-[10px] tracking-[0.3em] uppercase">Scroll Down</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -45,9 +45,9 @@ export function Home() {
       </section>
 
       {/* --- 2. FEATURED PROJECTS --- */}
-      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
+      <section className="py-10 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
         
-        <div className="mb-12 border-b border-white/10 pb-6">
+        <div className="mb-2 border-b border-white/10 pb-6">
           <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block">
             — Selected Work —
           </span>
@@ -81,7 +81,7 @@ export function Home() {
       </section>
 
       {/* --- 3. ABOUT ME SECTION (NUEVA) --- */}
-      <section className="py-20 bg-gray-900 border-t border-white/5 relative z-20">
+      <section className="py-20 bg-black border-t border-white/5 relative z-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
