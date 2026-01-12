@@ -76,20 +76,23 @@ export function Header() {
       : 'text-white drop-shadow-none'
   }`;
 
+  // --- DEFINICIÓN DE RUTAS ---
+  // Mapeamos los nombres visuales con las rutas reales de tu App.jsx
+  const navItems = [
+    { label: 'HOME', path: '/' },
+    { label: 'PROJECTS', path: '/projects' },
+    { label: 'IMAGES', path: '/images' },
+    { label: 'EXPERIENCE', path: '/experience' }, 
+    { label: 'CONTACT', path: '/contact' },
+  ];
+
   return (
     <>
       <header className={getHeaderClass()}>
         <nav className="w-full max-w-7xl flex flex-col items-center text-center px-4 md:px-6 overflow-hidden">
           
           {/* LOGO / NOMBRE */}
-          {/* Ajustamos el min-h para que no salte el layout */}
-          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-15 md:min-h-20">
-            
-            {/* TAMAÑO UNIFICADO:
-                - Mobile: text-[10vw] (grande pero seguro para que entre el nombre completo)
-                - Desktop: text-[3.5rem] (el tamaño "navbar" que queda elegante)
-                - Ya no usamos isScrolled para cambiar el tamaño, así no hay saltos.
-            */}
+          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-[60px] md:min-h-[80px]">
             <h1 className="font-bebas leading-none whitespace-nowrap select-none flex justify-center items-end text-[10vw] md:text-[3.5rem] tracking-widest">
               
               <span className={fadedClass} style={staggeredTransition}>
@@ -110,16 +113,29 @@ export function Header() {
           <ul className={`flex gap-4 md:gap-10 justify-center items-center list-none w-full flex-wrap transition-all duration-1000
               ${isScrolled ? 'opacity-100 mt-0' : 'opacity-80 mt-2 md:mt-4'}`}>
             
-            {['HOME', 'PROJECTS', 'IMAGES', 'EXPERIENCE', 'CONTACT'].map((item) => (
-              <li key={item}>
-                <Link 
-                  className="text-white/60 hover:text-white transition-colors duration-500 no-underline uppercase text-[10px] md:text-xs tracking-[0.2em] font-montserrat font-bold" 
-                  to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              // Lógica para saber si este item está activo
+              // Si es HOME ('/'), tiene que ser coincidencia exacta
+              // Si es otra ruta, verificamos si el pathname empieza con esa ruta (útil para sub-rutas como /projects/algo)
+              const isActive = item.path === '/' 
+                ? location.pathname === '/' 
+                : location.pathname.startsWith(item.path);
+
+              return (
+                <li key={item.label}>
+                  <Link 
+                    to={item.path}
+                    className={`transition-colors duration-300 no-underline uppercase text-[10px] md:text-xs tracking-[0.2em] font-montserrat font-bold
+                      ${isActive 
+                        ? 'text-yellow-400 drop-shadow-[0_0_3px_rgba(250,204,21,0.4)]' // Estilo ACTIVO
+                        : 'text-white/60 hover:text-white' // Estilo NORMAL
+                      }`} 
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </header>
