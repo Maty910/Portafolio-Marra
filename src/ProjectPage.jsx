@@ -1,10 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
 
-// DATA: Centralizamos la info de los proyectos acá.
-// En un futuro, esto podría venir de un archivo separado o una DB.
+// DATA: Centralizamos la info de los proyectos.
 const projectsData = {
   'castillo-de-arena': {
     title: 'Castillo de Arena',
@@ -28,7 +27,7 @@ const projectsData = {
     title: 'La Misma Sombra',
     description: 'Lorem ipsum dolor sit amet, descripción del proyecto pendiente.',
     credits: { Director: 'Nombre Director', Camera: 'Blackmagic 6K' },
-    videoUrl: null // Si no hay video, no se muestra
+    videoUrl: null 
   }
 };
 
@@ -45,10 +44,14 @@ function ProjectPage() {
     videoUrl: null
   };
 
-  // Lógica de carga de imágenes (Manteniendo tu estructura de Vite)
+  // Scroll al top al cambiar de proyecto
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectName]);
+
+  // Carga de imágenes
   useEffect(() => {
     const selectImagesByProject = (name) => {
-      // Vite necesita strings literales para los globs, por eso mantenemos el switch
       switch (name) {
         case 'castillo-de-arena':
           return import.meta.glob('./assets/Stills Castillos de arena/*.{png,jpg,jpeg,svg}');
@@ -83,73 +86,95 @@ function ProjectPage() {
     <div className="bg-black min-h-screen text-white selection:bg-white selection:text-black fade-in">
       <Header />
 
-      <main className="pt-24 md:pt-32 pb-20">
+      <main className="pt-28 md:pt-36 pb-20">
         
+        {/* --- NAVEGACIÓN DE CONTEXTO (BREADCRUMB) --- */}
+        {/* Esto le da al usuario la ubicación exacta y un botón de retorno claro */}
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-6 md:mb-10 flex items-center gap-3">
+          <Link 
+            to="/projects" 
+            className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors duration-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 transition-transform group-hover:-translate-x-1">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            <span className="font-bebas tracking-widest text-lg md:text-xl pt-0.5">PROYECTOS</span>
+          </Link>
+          
+          <span className="text-white/20">/</span>
+          
+          <span className="font-bebas tracking-widest text-lg md:text-xl text-white pt-0.5 opacity-80 cursor-default">
+            {projectInfo.title.toUpperCase()}
+          </span>
+        </div>
+
         {/* --- SECCIÓN HERO: VIDEO PRINCIPAL --- */}
-        {/* Prioridad visual: El video va arriba, full width en mobile, contenedor "Cine" en desktop */}
         {projectInfo.videoUrl && (
-          <section className="w-full px-0 md:px-8 lg:px-12 mb-12">
-            <div className="relative w-full aspect-video max-w-7xl mx-auto shadow-[0_0_50px_rgba(255,255,255,0.05)]">
-              <iframe
-                className="absolute inset-0 w-full h-full md:rounded-sm"
-                src={projectInfo.videoUrl}
-                title={projectInfo.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+          <section className="w-full mb-12 md:mb-16">
+            {/* Contenedor responsivo: En mobile es full-width, en desktop tiene max-width */}
+            <div className="w-full md:max-w-7xl md:mx-auto md:px-12">
+              <div className="relative w-full aspect-video shadow-[0_0_30px_rgba(0,0,0,0.5)] md:shadow-[0_0_50px_rgba(255,255,255,0.05)]">
+                <iframe
+                  className="absolute inset-0 w-full h-full md:rounded-sm"
+                  src={projectInfo.videoUrl}
+                  title={projectInfo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </section>
         )}
 
         {/* --- SECCIÓN INFO DEL PROYECTO --- */}
-        <section className="max-w-4xl mx-auto px-6 md:px-0 mb-20 text-center md:text-left">
-          <div className="flex flex-col md:flex-row gap-8 justify-between items-start border-b border-white/10 pb-8">
+        <section className="max-w-5xl mx-auto px-6 md:px-12 mb-24">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 justify-between items-start border-b border-white/10 pb-12">
             
             {/* Título y Descripción */}
-            <div className="md:w-2/3">
-              <h1 className="font-bebas text-5xl md:text-7xl leading-none tracking-wide mb-6 text-white">
+            <div className="md:w-3/5">
+              <h1 className="font-bebas text-5xl md:text-7xl leading-none tracking-wide mb-6 text-white drop-shadow-lg">
                 {projectInfo.title}
               </h1>
-              <p className="font-inter font-light text-white/70 text-lg leading-relaxed max-w-2xl">
+              <p className="font-montserrat font-light text-white/80 text-sm md:text-base leading-7 tracking-wide max-w-2xl">
                 {projectInfo.description}
               </p>
             </div>
 
-            {/* Créditos / Ficha Técnica (Toque Profesional) */}
-            <div className="md:w-1/3 w-full flex flex-col gap-4 font-montserrat text-sm bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h3 className="uppercase tracking-widest text-white/40 text-xs font-bold border-b border-white/10 pb-2 mb-1">
-                Créditos
+            {/* Ficha Técnica (Diseño limpio vertical) */}
+            <div className="md:w-2/5 w-full flex flex-col gap-5">
+              <h3 className="font-bebas text-2xl tracking-widest text-white/90 mb-1">
+                FICHA TÉCNICA
               </h3>
-              {Object.entries(projectInfo.credits).length > 0 ? (
-                Object.entries(projectInfo.credits).map(([role, name]) => (
-                  <div key={role} className="flex justify-between">
-                    <span className="text-white/50 uppercase text-xs">{role}</span>
-                    <span className="text-white font-medium">{name}</span>
-                  </div>
-                ))
-              ) : (
-                <span className="text-white/30 italic">Sin créditos especificados</span>
-              )}
+              
+              <div className="flex flex-col gap-3 font-montserrat text-sm border-l border-white/20 pl-6">
+                {Object.entries(projectInfo.credits).length > 0 ? (
+                  Object.entries(projectInfo.credits).map(([role, name]) => (
+                    <div key={role} className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                      <span className="text-white/40 uppercase text-xs tracking-wider font-semibold">{role}</span>
+                      <span className="text-white font-medium tracking-wide text-right">{name}</span>
+                    </div>
+                  ))
+                ) : (
+                  <span className="text-white/30 italic">Información no disponible</span>
+                )}
+              </div>
             </div>
           </div>
         </section>
 
         {/* --- SECCIÓN STILLS (GALERÍA) --- */}
         {images.length > 0 && (
-          <section className="max-w-7xl mx-auto px-4 md:px-8">
+          <section className="max-w-7xl mx-auto px-4 md:px-12">
             <div className="flex items-end gap-4 mb-8 px-2">
               <h3 className="font-bebas text-3xl md:text-4xl text-white tracking-wider">
-                Stills
+                STILLS
               </h3>
-              <div className="h-px bg-white/20 flex-grow mb-2"></div>
-              <span className="font-montserrat text-xs text-white/40 mb-2">
-                {images.length} IMÁGENES
-              </span>
+              <div className="h-px bg-white/10 grow mb-2"></div>
             </div>
 
-            {/* Grilla Masonry-style */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Grilla Masonry-style Responsiva */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {images.map((image, index) => (
                 <div 
                   key={index}
@@ -160,10 +185,10 @@ function ProjectPage() {
                     src={image} 
                     alt={`Still ${index + 1}`} 
                     loading="lazy"
-                    className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-110" 
+                    className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-110 opacity-90 group-hover:opacity-100" 
                   />
-                  {/* Overlay sutil al hover */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none" />
+                  {/* Overlay sutil */}
+                  <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               ))}
             </div>
@@ -173,15 +198,14 @@ function ProjectPage() {
 
       <Footer />
 
-      {/* --- LIGHTBOX (MODAL) MEJORADO --- */}
+      {/* --- LIGHTBOX (MODAL) --- */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
+          className="fixed inset-0 z-100 bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
           onClick={() => setSelectedImage(null)}
         >
-          {/* Botón Cerrar Flotante */}
           <button 
-            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2"
+            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2 z-50"
             aria-label="Cerrar"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
@@ -192,8 +216,8 @@ function ProjectPage() {
           <img 
             src={selectedImage} 
             alt="Vista completa" 
-            className="max-w-full max-h-[90vh] rounded shadow-2xl scale-in-95 animate-in duration-300 object-contain select-none"
-            onClick={(e) => e.stopPropagation()} // Evita cerrar si clickeas la foto
+            className="max-w-full max-h-[90vh] rounded shadow-2xl object-contain select-none"
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
