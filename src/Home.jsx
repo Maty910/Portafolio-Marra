@@ -28,8 +28,10 @@ export function Home() {
           autoPlay loop muted playsInline 
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="/src/assets/videos/reel.mp4" type="video/mp4" />
-          <img src="/src/assets/videos/reel.mp4" alt="Reel Background" className="w-full h-full object-cover" />
+          {/* RUTA CORREGIDA: Apunta a la carpeta public/videos/ */}
+          <source src="/videos/reel.mp4" type="video/mp4" />
+          {/* Fallback por si no carga */}
+          <img src="/img/reel-poster.jpg" alt="Reel Background" className="w-full h-full object-cover" />
         </video>
 
         <div className="absolute inset-0 bg-black/30 z-10" />
@@ -45,9 +47,9 @@ export function Home() {
       </section>
 
       {/* --- 2. FEATURED PROJECTS --- */}
-      <section className="py-10 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
+      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
         
-        <div className="mb-2 border-b border-white/10 pb-6">
+        <div className="mb-12 border-b border-white/10 pb-6">
           <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block">
             — Selected Work —
           </span>
@@ -80,27 +82,26 @@ export function Home() {
 
       </section>
 
-      {/* --- 3. ABOUT ME SECTION (NUEVA) --- */}
-      <section className="py-20 bg-black border-t border-white/5 relative z-20">
+      {/* --- 3. ABOUT ME SECTION --- */}
+      <section className="py-20 bg-gray-900 border-t border-white/5 relative z-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             
-            {/* IMAGEN DE PERFIL (Izquierda en desktop, arriba en mobile) */}
+            {/* IMAGEN DE PERFIL */}
             <div className="md:col-span-5 relative group">
               <div className="aspect-[3/4] w-full overflow-hidden rounded-sm relative">
-                {/* ⚠️ Reemplazá 'profile.jpg' con tu foto real en /img/ */}
+                {/* RUTA CORREGIDA: Apunta a public/img/ */}
                 <img 
-                  src="/src/assets/Profile/profile.jpg" 
+                  src="/img/profile.jpg" 
                   alt="Joaquín Marraccini" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
                 />
-                {/* Marco decorativo */}
                 <div className="absolute inset-0 border border-white/10 group-hover:border-yellow-400/50 transition-colors duration-500 pointer-events-none" />
               </div>
             </div>
 
-            {/* TEXTO (Derecha) */}
+            {/* TEXTO */}
             <div className="md:col-span-7 md:pl-8">
               <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4 block">
                 — Perfil —
@@ -122,7 +123,6 @@ export function Home() {
                 </p>
               </div>
 
-              {/* Botón de Contacto */}
               <div className="mt-8">
                 <Link 
                   to="/contact" 
