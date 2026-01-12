@@ -83,13 +83,13 @@ export function Home() {
       </section>
 
       {/* --- 3. ABOUT ME SECTION --- */}
-      <section className="py-20 bg-gray-900 border-t border-white/5 relative z-20">
+      <section className="py-20 bg-black border-t border-white/5 relative z-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             
             {/* FOTO DE PERFIL */}
             <div className="md:col-span-5 relative group">
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-sm relative">
+              <div className="aspect-3/4 w-full overflow-hidden rounded-sm relative">
                 {/* USAMOS LA VARIABLE IMPORTADA AQUÍ */}
                 <img 
                   src={profileImg} 
@@ -102,19 +102,19 @@ export function Home() {
 
             {/* TEXTO */}
             <div className="md:col-span-7 md:pl-8">
-              <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4 block">
-                — Perfil —
+              <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4 block selection:bg-yellow-400 selection:text-black">
+                — Profile —
               </span>
-              <h2 className="font-bebas text-4xl md:text-6xl tracking-widest text-white leading-none mb-6">
+              <h2 className="font-bebas text-4xl md:text-6xl tracking-widest text-white leading-none mb-6 selection:bg-yellow-400 selection:text-black">
                 ABOUT ME
               </h2>
-              <div className="font-montserrat text-white/80 text-sm md:text-base leading-loose space-y-4 tracking-wide text-justify md:text-left">
+              <div className="font-montserrat text-white/80 text-sm md:text-base leading-loose space-y-4 tracking-wide text-justify md:text-left selection:bg-yellow-400 selection:text-black">
                 <p>I am <strong className="text-white">Joaquín Marraccini</strong>, Director of Photography and Photographer.</p>
                 <p>My focus is on visual storytelling, using light and color to enhance the narrative.</p>
                 <p>With experience in advertising, music videos, and fiction, I always seek the best aesthetic and technical quality in every project.</p>
               </div>
               <div className="mt-8">
-                <Link to="/contact" className="inline-flex items-center gap-2 text-yellow-400 hover:text-white transition-colors duration-300 font-montserrat text-xs tracking-[0.2em] uppercase font-bold">
+                <Link to="/contact" className="inline-flex items-center gap-2 text-yellow-400 hover:text-white transition-colors duration-300 font-montserrat text-xs tracking-[0.2em] uppercase font-bold selection:bg-yellow-400 selection:text-black">
                   <span>Lets Talk</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
