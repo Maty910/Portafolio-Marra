@@ -7,8 +7,8 @@ import { Footer } from './Footer.jsx';
 const projectsData = {
   'castillo-de-arena': {
     title: 'Castillo de Arena',
-    description: 'Una exploración visual sobre la fragilidad de la memoria y el paso del tiempo. Rodado en locaciones naturales aprovechando la luz disponible del atardecer.',
-    credits: { Director: 'Nombre Director', Color: 'Nombre Colorista', Camera: 'Arri Alexa Mini' },
+    description: 'En este documental nos adentramos en la vida de Adrián, quien trabaja en un estacionamiento y siempre busca la manera de ponerle una impronta personal a su dia a dia tan rutinario.',
+    credits: { Director: 'Maria del Pilar Judez', Color: 'Nombre Colorista', Camera: 'Arri Alexa Mini' },
     videoUrl: 'https://www.youtube.com/embed/kdsB5FriV-0?start=172'
   },
   'cada-cosa-que-no-sé': {
@@ -19,7 +19,7 @@ const projectsData = {
   },
   'intervalo': {
     title: 'Intervalo',
-    description: 'Cortometraje experimental. La cámara busca los espacios vacíos y los silencios entre los diálogos.',
+    description: 'Un chico apasionado por las películas, va al cine a ver un reestreno , lo que no se espera es conectar con un personaje de la película de una manera especial.',
     credits: { Director: 'Nombre Director', Color: 'Nombre Colorista', Camera: 'Red Komodo' },
     videoUrl: 'https://www.youtube.com/embed/l2T53phSMQM?start=405'
   },

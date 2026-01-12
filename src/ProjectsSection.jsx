@@ -7,10 +7,10 @@ function ProjectsSection() {
   
   // 1. Definimos tus datos aquí para mantener el render limpio y poder contar cuántos hay
   const myProjects = [
-    { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: "Ficción" },
-    { name: "Intervalo", img: "intervalo.jpg", cat: "Ficción" },
-    { name: "Castillo de arena", img: "castillo de arena.jpg", cat: "Documental" },
-    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: "Video Arte" },
+    { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: "Fiction" },
+    { name: "Intervalo", img: "intervalo.jpg", cat: "Fiction" },
+    { name: "Castillo de arena", img: "castillo de arena.jpg", cat: "Documentary" },
+    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: "Video Clip" },
   ];
 
   // 2. Scroll al inicio al cargar la página
