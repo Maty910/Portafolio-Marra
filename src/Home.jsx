@@ -28,8 +28,8 @@ export function Home() {
           autoPlay loop muted playsInline 
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="public\videos\reel.mp4" type="video/mp4" />
-          <img src="public\videos\reel.mp4" alt="Reel Background" className="w-full h-full object-cover" />
+          <source src="/src/assets/videos/reel.mp4" type="video/mp4" />
+          <img src="/src/assets/videos/reel.mp4" alt="Reel Background" className="w-full h-full object-cover" />
         </video>
 
         <div className="absolute inset-0 bg-black/30 z-10" />
@@ -91,7 +91,7 @@ export function Home() {
               <div className="aspect-[3/4] w-full overflow-hidden rounded-sm relative">
                 {/* ⚠️ Reemplazá 'profile.jpg' con tu foto real en /img/ */}
                 <img 
-                  src="/img/profile.jpg" 
+                  src="/src/assets/Profile/profile.jpg" 
                   alt="Joaquín Marraccini" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
                 />
@@ -112,13 +112,13 @@ export function Home() {
 
               <div className="font-montserrat text-white/80 text-sm md:text-base leading-loose space-y-4 tracking-wide text-justify md:text-left">
                 <p>
-                  Soy <strong className="text-white">Joaquín Marraccini</strong>, director de fotografía y colorista.
+                  I am <strong className="text-white">Joaquín Marraccini</strong>, Director of Photography and Photographer.
                 </p>
                 <p>
-                  Mi enfoque se centra en la narrativa visual, utilizando la luz y el color para potenciar la historia.
+                  My focus is on visual storytelling, using light and color to enhance the narrative.
                 </p>
                 <p>
-                  Con experiencia en publicidad, videoclips y ficción, busco siempre la mejor calidad estética y técnica en cada proyecto.
+                  With experience in advertising, music videos, and fiction, I always seek the best aesthetic and technical quality in every project.
                 </p>
               </div>
 
