@@ -45,11 +45,11 @@ export function Header() {
 
     if (isHome) {
       if (isScrolled) {
-        return `${base} top-0 py-3 backdrop-blur-md bg-black/90 border-b border-white/5 shadow-lg`;
+        return `${base} top-0 py-3 backdrop-blur-md bg-black/90 shadow-lg`;
       }
       return `${base} top-1/2 transform -translate-y-1/2 py-4`;
     }
-    return `${base} top-0 py-3 backdrop-blur-md bg-black/90 border-b border-white/5 shadow-lg`;
+    return `${base} top-0 py-3 backdrop-blur-md bg-black/90 shadow-lg`;
   };
 
   // --- TRANSICIONES ---
@@ -71,7 +71,7 @@ export function Header() {
   // MARRA (SOLO BRILLO)
   const highlightClass = `transition-all duration-[6000ms] ease-in-out inline-block align-bottom ${
     animateBrand 
-      ? 'text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]' 
+      ? 'text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]' 
       : 'text-white drop-shadow-none'
   }`;
 
@@ -81,7 +81,7 @@ export function Header() {
         <nav className="w-full max-w-7xl flex flex-col items-center text-center px-4 md:px-6 overflow-hidden">
           
           {/* LOGO / NOMBRE */}
-          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-[60px] md:min-h-[100px]">
+          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-15 md:min-h-25">
             {/* FIX MOBILE: text-[13vw] y tracking-wide para que entre perfecto */}
             <h1 className={`font-bebas leading-none whitespace-nowrap select-none flex justify-center items-end
                 ${isScrolled 
