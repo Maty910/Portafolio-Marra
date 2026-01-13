@@ -5,23 +5,20 @@
 /* 2. Importamos Tailwind v4 */
 @import "tailwindcss";
 
-/* 3. Configuración del Tema (Reemplaza a tailwind.config.js) */
+/* 3. Configuración del Tema */
 @theme {
   /* Fuentes personalizadas */
   --font-bebas: "Bebas Neue", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --font-inter: "Inter", sans-serif;
 
-  /* Colores personalizados (pm-black, pm-gray, etc.) */
+  /* Colores personalizados */
   --color-pm-black: #000000;
   --color-pm-gray: #6a6a6a;
   --color-pm-white: #f2f2f2;
 }
 
-/* 4. Estilos Base y Legacy (Lo que tenías en App.css) */
-
-/* Mantenemos tus variables CSS nativas por si las usás en otro lado,
-   pero ahora apuntan a los valores de Tailwind para ser consistentes */
+/* 4. Estilos Base */
 :root {
   --color-1: var(--color-pm-black);
   --color-2: var(--color-pm-gray);
@@ -40,12 +37,12 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  /* Aseguramos que el body use tus colores por defecto */
   background-color: var(--color-pm-black);
   color: var(--color-pm-white);
+  overflow-x: hidden; /* Importante para evitar scroll lateral indeseado */
 }
 
-/* Clases específicas que tenías en App.css (migradas a Tailwind layer) */
+/* Clases específicas */
 @layer components {
   .logo {
     display: flex;
@@ -53,13 +50,45 @@ body {
     justify-content: center;
   }
   
-  /* Esto asegura que si usás la clase .h1-span siga funcionando */
   .h1-span {
     font-family: var(--font-bebas);
   }
 }
 
-/* Utilidades de respaldo (legacy) */
+/* Utilidades de respaldo */
 .font-bebas { font-family: var(--font-bebas); }
 .font-montserrat { font-family: var(--font-montserrat); }
 .font-inter { font-family: var(--font-inter); }
+
+
+/* --- AGREGADOS NUEVOS (SCROLLBAR & SELECTION) --- */
+
+/* 1. Selección de texto (para que combine) */
+::selection {
+  background-color: #facc15; /* Amarillo */
+  color: #000;
+}
+
+/* 2. Scrollbar Personalizada (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho finito */
+}
+
+/* El fondo de la barra */
+::-webkit-scrollbar-track {
+  background: #0a0a0a; /* Apenas más claro que el negro puro */
+}
+
+/* La barrita en sí */
+::-webkit-scrollbar-thumb {
+  background: #333; /* Gris oscuro en reposo */
+  border-radius: 4px;
+  border: 1px solid #000; /* Borde para separarla del fondo */
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por la barra */
+::-webkit-scrollbar-thumb:hover {
+  background: #facc15; /* Se pone amarilla */
+  box-shadow: 0 0 10px #facc15; /* Y brilla! */
+}
