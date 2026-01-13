@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguage } from './LanguageContext.jsx';
 import { Link } from 'react-router-dom';
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
@@ -21,6 +22,8 @@ export function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  const { t } = useLanguage();
+
   return (
     <div className="bg-black min-h-screen text-white fade-in relative font-sans">
       <Header />
@@ -40,7 +43,7 @@ export function Home() {
 
         <div className="absolute bottom-10 left-0 w-full z-20 flex justify-center animate-bounce">
           <div className="text-white/50 flex flex-col items-center gap-2">
-            <span className="font-montserrat text-[10px] tracking-[0.3em] uppercase">Scroll Down</span>
+            <span className="font-montserrat text-[10px] tracking-[0.3em] uppercase">{t('home.scrollDown')}</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
             </svg>
@@ -52,10 +55,10 @@ export function Home() {
       <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
         <div className="mb-12 border-b border-white/10 pb-6">
           <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block">
-            — Selected Work —
+            {t('home.selectedWork')}
           </span>
           <h2 className="font-bebas text-4xl md:text-5xl tracking-widest text-white leading-none">
-            LATEST PROJECTS
+            {t('home.latestProjects')}
           </h2>
         </div>
 
@@ -76,7 +79,7 @@ export function Home() {
             className="group border border-white/20 px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 rounded-sm"
           >
             <span className="font-montserrat text-xs tracking-[0.3em] uppercase font-bold group-hover:tracking-[0.4em] transition-all">
-              View All Projects
+              {t('home.viewAll')}
             </span>
           </Link>
         </div>
@@ -102,20 +105,20 @@ export function Home() {
 
             {/* TEXTO */}
             <div className="md:col-span-7 md:pl-8">
-              <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4 block selection:bg-yellow-400 selection:text-black">
-                — Profile —
-              </span>
-              <h2 className="font-bebas text-4xl md:text-6xl tracking-widest text-white leading-none mb-6 selection:bg-yellow-400 selection:text-black">
-                ABOUT ME
-              </h2>
+                  <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4 block selection:bg-yellow-400 selection:text-black">
+                    {t('home.profileKicker')}
+                  </span>
+                  <h2 className="font-bebas text-4xl md:text-6xl tracking-widest text-white leading-none mb-6 selection:bg-yellow-400 selection:text-black">
+                    {t('home.aboutMe')}
+                  </h2>
               <div className="font-montserrat text-white/80 text-sm md:text-base leading-loose space-y-4 tracking-wide text-justify md:text-left selection:bg-yellow-400 selection:text-black">
-                <p>I am <strong className="text-white">Joaquín Marraccini</strong>, Director of Photography and Photographer.</p>
-                <p>My focus is on visual storytelling, using light and color to enhance the narrative.</p>
-                <p>With experience in advertising, music videos, and fiction, I always seek the best aesthetic and technical quality in every project.</p>
+                {t('home.aboutLines').map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
               </div>
               <div className="mt-8">
                 <Link to="/contact" className="inline-flex items-center gap-2 text-yellow-400 hover:text-white transition-colors duration-300 font-montserrat text-xs tracking-[0.2em] uppercase font-bold selection:bg-yellow-400 selection:text-black">
-                  <span>Lets Talk</span>
+                      <span>{t('home.letsTalk')}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                   </svg>
