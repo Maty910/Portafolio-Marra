@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguage } from './LanguageContext.jsx';
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
 
@@ -8,6 +9,8 @@ export function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const { t } = useLanguage();
 
   return (
     <div className="bg-black min-h-screen text-white selection:bg-yellow-400 selection:text-black fade-in font-sans flex flex-col justify-between">
@@ -20,12 +23,12 @@ export function Contact() {
           
           {/* Kicker */}
           <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block ml-1">
-            — Get in Touch —
+            {t('contact.kicker')}
           </span>
 
           {/* Título Principal */}
           <h1 className="font-bebas text-5xl md:text-7xl tracking-widest text-white leading-none mb-4">
-            CONTACT & ABOUT
+            {t('contact.title')}
           </h1>
         </div>
 
@@ -35,20 +38,15 @@ export function Contact() {
           {/* COLUMNA 1: ABOUT ME (Breve bio) */}
           <div className="space-y-6">
             <h2 className="text-white font-bebas text-2xl tracking-wider">
-              About Me
+              {t('contact.aboutTitle')}
             </h2>
             <div className="font-montserrat text-white/70 text-sm md:text-base leading-relaxed space-y-4">
-              <p>
-                I am Joaquin Marraccini, a Cinematographer and Photographer based in Buenos Aires, Argentina. 
-                Passion for visual storytelling drives every frame I capture.
-              </p>
-              <p>
-                Whether it is a feature film, music video, or commercial project, my goal is to create 
-                immersive atmospheres through lighting and composition.
-              </p>
+              {t('contact.aboutLines').map((line, i) => (
+                <p key={i}>{line}</p>
+              ))}
               <div className="pt-4 flex items-center gap-2 text-white/50 text-xs tracking-widest uppercase">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-                Available for freelance projects
+                {t('contact.available')}
               </div>
             </div>
           </div>
@@ -59,7 +57,7 @@ export function Contact() {
             {/* EMAIL BLOCK */}
             <div className="group">
               <span className="text-xs font-montserrat text-white/40 tracking-[0.2em] uppercase block mb-2">
-                Email Me
+                {t('contact.emailLabel')}
               </span>
               <a 
                 href="mailto:marraccinijoaquin@gmail.com" 
@@ -72,7 +70,7 @@ export function Contact() {
             {/* SOCIAL LINKS */}
             <div className="space-y-6">
               <span className="text-xs font-montserrat text-white/40 tracking-[0.2em] uppercase block mb-2">
-                Follow My Work
+                {t('contact.follow')}
               </span>
               
               <div className="flex flex-col gap-4">
@@ -114,7 +112,7 @@ export function Contact() {
 
             {/* Location */}
             <div className="pt-6 border-t border-white/10">
-              <span className="font-bebas text-white/50 tracking-wider">Based in Buenos Aires, Argentina 🇦🇷</span>
+              <span className="font-bebas text-white/50 tracking-wider">{t('contact.based')}</span>
             </div>
 
           </div>
