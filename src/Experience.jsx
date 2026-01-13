@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Footer from './Footer';
 import { Header } from './Header';
+import { useLanguage } from './LanguageContext.jsx';
 // DESCOMENTAR EN TU PROYECTO REAL:
 // import { Header } from './Header.jsx';
 // import { Footer } from './Footer.jsx';
@@ -162,6 +163,8 @@ const Experience = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const { t } = useLanguage();
+
   return (
     <div className="bg-black min-h-screen text-white selection:bg-yellow-400 selection:text-black fade-in font-sans">
       <Header />
@@ -172,18 +175,18 @@ const Experience = () => {
         <div className="mb-2 border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="flex flex-col items-start">
             <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 ml-1">
-              — Technical Credits —
+              {t('experience.kicker')}
             </span>
             <h1 className="font-bebas text-5xl md:text-7xl tracking-widest text-white leading-none">
-              EXPERIENCE
+              {t('experience.title')}
             </h1>
             <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-3 uppercase ml-1">
-              Gaffer • Electrician • 1st AC • Grip
+              {t('experience.roles')}
             </p>
           </div>
           
           <span className="font-montserrat text-xs text-white/30 hidden md:block tracking-widest mb-1 uppercase">
-            {experienceData.length} CREDITS
+            {experienceData.length} {t('experience.credits')}
           </span>
         </div>
 
@@ -271,7 +274,7 @@ const Experience = () => {
               className="absolute -top-12 right-0 md:top-4 md:right-4 text-white/50 hover:text-yellow-400 transition-colors z-50 flex items-center gap-2 group"
               onClick={(e) => { e.stopPropagation(); setSelectedVideo(null); }}
             >
-              <span className="text-xs uppercase tracking-widest font-bold hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">Close</span>
+              <span className="text-xs uppercase tracking-widest font-bold hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">{t('experience.close')}</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
