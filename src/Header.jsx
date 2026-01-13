@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useBrand } from './BrandContext.jsx'; // Importamos el contexto
+import { useLanguage } from './LanguageContext.jsx';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,22 +78,23 @@ export function Header() {
   }`;
 
   // --- DEFINICIÓN DE RUTAS ---
+  const { t, lang, toggleLanguage } = useLanguage();
   // Mapeamos los nombres visuales con las rutas reales de tu App.jsx
   const navItems = [
-    { label: 'HOME', path: '/' },
-    { label: 'PROJECTS', path: '/projects' },
-    { label: 'IMAGES', path: '/images' },
-    { label: 'EXPERIENCE', path: '/experience' }, 
-    { label: 'CONTACT', path: '/contact' },
+    { label: t('nav.home'), path: '/' },
+    { label: t('nav.projects'), path: '/projects' },
+    { label: t('nav.images'), path: '/images' },
+    { label: t('nav.experience'), path: '/experience' },
+    { label: t('nav.contact'), path: '/contact' },
   ];
 
   return (
     <>
       <header className={getHeaderClass()}>
-        <nav className="w-full max-w-7xl flex flex-col items-center text-center px-4 md:px-6 overflow-hidden">
+        <nav className="relative w-full max-w-7xl flex flex-col items-center text-center px-4 md:px-6 overflow-hidden">
           
           {/* LOGO / NOMBRE */}
-          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-[60px] md:min-h-[80px]">
+          <div className="flex flex-col items-center justify-center w-full mb-2 md:mb-0 min-h-15 md:min-h-20">
             <h1 className="font-bebas leading-none whitespace-nowrap select-none flex justify-center items-end text-[10vw] md:text-[3.5rem] tracking-widest">
               
               <span className={fadedClass} style={staggeredTransition}>
@@ -137,6 +139,22 @@ export function Header() {
               );
             })}
           </ul>
+
+          {/* LANGUAGE TOGGLE (responsive & accessible) */}
+          <div className="absolute right-4 top-3 md:top-4 flex items-center">
+            <button
+              onClick={toggleLanguage}
+              aria-label={lang === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish'}
+              title={lang === 'es' ? 'EN' : 'ES'}
+              className="flex items-center gap-3 bg-white/5 hover:bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/10 backdrop-blur-sm transition-all duration-300"
+            >
+              <span className="text-[11px] font-montserrat uppercase tracking-widest">{lang === 'es' ? 'ES' : 'EN'}</span>
+              <span className={`w-8 h-4 rounded-full p-0.5 bg-white/10 relative transition-all ${lang === 'es' ? 'justify-start' : 'justify-end'}`}> 
+                <span className={`block w-3.5 h-3.5 rounded-full bg-white transition-transform ${lang === 'es' ? '' : 'transform translate-x-4'}`} />
+              </span>
+            </button>
+          </div>
+
         </nav>
       </header>
       
