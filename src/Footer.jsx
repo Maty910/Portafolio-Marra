@@ -1,4 +1,8 @@
+import { useLanguage } from './LanguageContext.jsx';
+
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-black text-white py-12 border-t border-white/10 relative z-10 selection:bg-yellow-400 selection:text-black fade-in">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
@@ -9,7 +13,7 @@ export function Footer() {
             JOAQUÍN MARRACCINI
           </h2>
           <p className="font-montserrat text-[0.65rem] md:text-xs tracking-[0.3em] text-white/40 uppercase mt-2">
-            Director de Fotografía
+            {t('footer.role')}
           </p>
         </div>
 
@@ -21,7 +25,7 @@ export function Footer() {
             rel="noopener noreferrer" 
             className="font-bebas text-lg tracking-widest text-white/70 hover:text-white transition-all duration-300 hover:tracking-[0.15em]"
           >
-            INSTAGRAM
+            {t('footer.instagram')}
           </a>
           
           <span className="hidden md:block text-white/20">|</span>
@@ -30,7 +34,7 @@ export function Footer() {
             href="mailto:marraccinijoaquin@gmail.com" 
             className="font-bebas text-lg tracking-widest text-white/70 hover:text-white transition-all duration-300 hover:tracking-[0.15em]"
           >
-            EMAIL
+            {t('footer.email')}
           </a>
         </div>
 
@@ -39,11 +43,11 @@ export function Footer() {
       {/* COPYRIGHT & DEV (Súper sutil al final) */}
       <div className="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
         <p className="font-montserrat text-[10px] tracking-wider text-white/20 uppercase">
-          © {new Date().getFullYear()} Buenos Aires, Argentina
+          {t('footer.copyright')}
         </p>
         
         <p className="font-montserrat text-[10px] tracking-wider text-white/20 uppercase">
-          Design & Dev by{' '}
+          {t('footer.devBy')}{' '}
           <a 
             href="https://github.com/Maty910" 
             target="_blank" 
