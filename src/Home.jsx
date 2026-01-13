@@ -52,7 +52,7 @@ export function Home() {
       </section>
 
       {/* --- 2. FEATURED PROJECTS --- */}
-      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
+      <section className="py-2 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
         <div className="mb-12 border-b border-white/10 pb-6">
           <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block">
             {t('home.selectedWork')}
