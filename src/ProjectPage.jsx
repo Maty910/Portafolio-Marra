@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
+import { useLanguage } from './LanguageContext.jsx';
 
 // DATA: Info actualizada de los proyectos
 const projectsData = {
@@ -78,6 +79,8 @@ function ProjectPage() {
     window.scrollTo(0, 0);
   }, [projectName]);
 
+  const { t } = useLanguage();
+
   // Carga de imágenes (Mantiene la lógica de carpetas original)
   useEffect(() => {
     const selectImagesByProject = (name) => {
@@ -127,7 +130,7 @@ function ProjectPage() {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 transition-transform group-hover:-translate-x-1">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>
-            <span className="font-bebas tracking-widest text-lg md:text-xl pt-0.5">PROJECTS</span>
+            <span className="font-bebas tracking-widest text-lg md:text-xl pt-0.5">{t('projectPage.breadcrumbProjects')}</span>
           </Link>
           
           <span className="text-white/20">/</span>
@@ -161,9 +164,9 @@ function ProjectPage() {
             
             {/* Título y Descripción */}
             <div className="md:w-3/5">
-              <h1 className="font-bebas text-5xl md:text-7xl leading-none tracking-wide mb-6 text-white drop-shadow-lg selection:bg-yellow-400 selection:text-black">
-                {projectInfo.title}
-              </h1>
+                <h1 className="font-bebas text-5xl md:text-7xl leading-none tracking-wide mb-6 text-white drop-shadow-lg selection:bg-yellow-400 selection:text-black">
+                  {projectInfo.title}
+                </h1>
               <p className="font-montserrat font-light text-white/80 text-sm md:text-base leading-7 tracking-wide max-w-2xl selection:bg-yellow-400 selection:text-black">
                 {projectInfo.description}
               </p>
@@ -172,7 +175,7 @@ function ProjectPage() {
             {/* Ficha Técnica */}
             <div className="md:w-2/5 w-full flex flex-col gap-5">
               <h3 className="font-bebas text-2xl tracking-widest text-white/90 mb-1 selection:bg-yellow-400 selection:text-black">
-                CREDITS
+                {t('projectPage.creditsTitle')}
               </h3>
               
               <div className="flex flex-col gap-3 font-montserrat text-sm border-l border-white/20 pl-6 selection:bg-yellow-400 selection:text-black">
@@ -184,7 +187,7 @@ function ProjectPage() {
                     </div>
                   ))
                 ) : (
-                  <span className="text-white/30 italic selection:bg-yellow-400 selection:text-black">Information not available</span>
+                  <span className="text-white/30 italic selection:bg-yellow-400 selection:text-black">{t('projectPage.informationNotAvailable')}</span>
                 )}
               </div>
             </div>
@@ -196,7 +199,7 @@ function ProjectPage() {
           <section className="max-w-7xl mx-auto px-4 md:px-12">
             <div className="flex items-end gap-4 mb-8 px-2">
               <h3 className="font-bebas text-3xl md:text-4xl text-white tracking-wider selection:bg-yellow-400 selection:text-black">
-                STILLS
+                {t('projectPage.stillsTitle')}
               </h3>
               <div className="h-px bg-white/10 grow mb-2"></div>
             </div>

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Projects } from './Projects.jsx'; // Importamos la tarjeta individual
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
+import { useLanguage } from './LanguageContext.jsx';
 
 function ProjectsSection() {
   
@@ -18,6 +19,8 @@ function ProjectsSection() {
     window.scrollTo(0, 0);
   }, []);
 
+  const { t } = useLanguage();
+
   return (
     <div className="bg-black min-h-screen text-white selection:bg-white selection:text-black fade-in font-sans">
       <Header />
@@ -30,23 +33,23 @@ function ProjectsSection() {
             
             {/* SUBTÍTULO / KICKER */}
             <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 ml-1 selection:bg-yellow-400 selection:text-black fade-in">
-              — Proyectos —
+              {t('projects.kicker')}
             </span>
 
             {/* TÍTULO PRINCIPAL */}
             <h1 className="font-bebas text-5xl md:text-6xl tracking-widest text-white leading-none selection:bg-yellow-400 selection:text-black fade-in">
-              PROYECTOS
+              {t('projects.title')}
             </h1>
 
             {/* BAJADA */}
             <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-2 uppercase ml-1 selection:bg-yellow-400 selection:text-black fade-in">
-              Selección de Obras
+              {t('projects.intro')}
             </p>
           </div>
           
           {/* CONTADOR DINÁMICO */}
           <span className="font-montserrat text-xs text-white/30 hidden md:block tracking-widest mb-1 uppercase selection:bg-yellow-400 selection:text-black fade-in">
-            {myProjects.length} PROYECTOS
+            {myProjects.length} {t('projects.countLabel')}
           </span>
         </div>
 
