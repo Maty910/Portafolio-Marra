@@ -1,0 +1,101 @@
+import { createContext, useContext, useEffect, useState } from 'react';
+
+const LanguageContext = createContext();
+
+const translations = {
+  en: {
+    nav: { home: 'HOME', projects: 'PROJECTS', images: 'IMAGES', experience: 'EXPERIENCE', contact: 'CONTACT' },
+    home: {
+      scrollDown: 'Scroll Down',
+      selectedWork: '— Selected Work —',
+      latestProjects: 'LATEST PROJECTS',
+      viewAll: 'View All Projects',
+      profileKicker: '— Profile —',
+      aboutMe: 'ABOUT ME',
+      letsTalk: "Let's Talk",
+      aboutLines: [
+        'I am Joaquín Marraccini, Director of Photography and Photographer.',
+        'My focus is on visual storytelling, using light and color to enhance the narrative.',
+        'With experience in advertising, music videos, and fiction, I always seek the best aesthetic and technical quality in every project.'
+      ]
+    },
+    contact: {
+      kicker: '— Get in Touch —',
+      title: 'CONTACT & ABOUT',
+      aboutTitle: 'About Me',
+      aboutLines: [
+        'I am Joaquin Marraccini, a Cinematographer and Photographer based in Buenos Aires, Argentina.',
+        'Passion for visual storytelling drives every frame I capture.'
+      ],
+      available: 'Available for freelance projects',
+      emailLabel: 'Email Me',
+      follow: 'Follow My Work',
+      based: 'Based in Buenos Aires, Argentina 🇦🇷'
+    }
+  },
+  es: {
+    nav: { home: 'INICIO', projects: 'PROYECTOS', images: 'IMÁGENES', experience: 'EXPERIENCIA', contact: 'CONTACTO' },
+    home: {
+      scrollDown: 'Bajá para ver',
+      selectedWork: '— Trabajos Seleccionados —',
+      latestProjects: 'ÚLTIMOS PROYECTOS',
+      viewAll: 'Ver todos los proyectos',
+      profileKicker: '— Perfil —',
+      aboutMe: 'SOBRE MÍ',
+      letsTalk: 'Hablemos',
+      aboutLines: [
+        'Soy Joaquín Marraccini, Director de Fotografía y Fotógrafo.',
+        'Mi enfoque está en la narración visual, utilizando la luz y el color para potenciar la historia.',
+        'Con experiencia en publicidad, videoclips y ficción, siempre busco la mayor calidad estética y técnica en cada proyecto.'
+      ]
+    },
+    contact: {
+      kicker: '— Contactame —',
+      title: 'CONTACTO & ACERCA',
+      aboutTitle: 'Sobre mí',
+      aboutLines: [
+        'Soy Joaquín Marraccini, Director de Fotografía y Fotógrafo en Buenos Aires, Argentina.',
+        'La pasión por la narración visual guía cada plano que capturo.'
+      ],
+      available: 'Disponible para proyectos freelance',
+      emailLabel: 'Escribime',
+      follow: 'Seguí mi trabajo',
+      based: 'Basado en Buenos Aires, Argentina 🇦🇷'
+    }
+  }
+};
+
+export const LanguageProvider = ({ children }) => {
+  const [lang, setLang] = useState('es');
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('site-lang');
+      if (saved && (saved === 'es' || saved === 'en')) setLang(saved);
+    } catch (e) {}
+  }, []);
+
+  useEffect(() => {
+    try { localStorage.setItem('site-lang', lang); } catch (e) {}
+  }, [lang]);
+
+  const toggleLanguage = () => setLang((l) => (l === 'es' ? 'en' : 'es'));
+
+  const t = (path, fallback = '') => {
+    const parts = path.split('.');
+    let cur = translations[lang];
+    for (const p of parts) {
+      if (!cur) return fallback;
+      cur = cur[p];
+    }
+    return cur ?? fallback;
+  };
+
+  return (
+    <LanguageContext.Provider value={{ lang, toggleLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => useContext(LanguageContext);
