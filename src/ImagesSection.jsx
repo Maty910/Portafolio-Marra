@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
+import { useLanguage } from './LanguageContext.jsx';
 
 export function ImagesSection() {
   const [selectedPicture, setSelectedPicture] = useState(null);
@@ -12,6 +13,8 @@ export function ImagesSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const { t } = useLanguage();
 
   return (
     <div className="bg-black min-h-screen text-white selection:bg-yellow-400 selection:text-black fade-in font-sans">
@@ -25,23 +28,23 @@ export function ImagesSection() {
             
             {/* KICKER / SUBTÍTULO DE SECCIÓN (Consistencia UX) */}
             <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 ml-1">
-              — Galery —
+              {t('images.kicker')}
             </span>
 
             {/* Título Principal */}
             <h1 className="font-bebas text-5xl md:text-7xl tracking-widest text-white leading-none">
-              IMAGES
+              {t('images.title')}
             </h1>
 
             {/* Bajada / Descripción */}
             <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-3 uppercase ml-1">
-              Personal Selection
+              {t('images.description')}
             </p>
           </div>
           
           {/* Contador de imágenes (Oculto en muy pequeños, visible en md) */}
           <span className="font-montserrat text-[10px] md:text-xs text-white/30 tracking-widest mb-1 uppercase hidden md:block">
-            {photos.length} Imágenes capturadas
+            {photos.length} {t('images.countLabel')}
           </span>
         </div>
 
