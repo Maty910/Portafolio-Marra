@@ -65,6 +65,76 @@ const translations = {
   }
 };
 
+// Extensiones para otras secciones (proyectos, imágenes, experiencia, footer)
+translations.en.projects = {
+  kicker: '— Projects —',
+  title: 'PROJECTS',
+  intro: 'Selection of Works',
+  countLabel: 'PROJECTS'
+};
+translations.es.projects = {
+  kicker: '— Proyectos —',
+  title: 'PROYECTOS',
+  intro: 'Selección de Obras',
+  countLabel: 'PROYECTOS'
+};
+
+translations.en.images = {
+  kicker: '— Gallery —',
+  title: 'IMAGES',
+  description: 'Personal Selection',
+  countLabel: 'Images'
+};
+translations.es.images = {
+  kicker: '— Galería —',
+  title: 'IMÁGENES',
+  description: 'Selección personal',
+  countLabel: 'Imágenes'
+};
+
+translations.en.experience = {
+  kicker: '— Technical Credits —',
+  title: 'EXPERIENCE',
+  roles: 'Gaffer • Electrician • 1st AC • Grip',
+  credits: 'CREDITS',
+  close: 'Close'
+};
+translations.es.experience = {
+  kicker: '— Créditos Técnicos —',
+  title: 'EXPERIENCIA',
+  roles: 'Gaffer • Electrician • 1st AC • Grip',
+  credits: 'CRÉDITOS',
+  close: 'Cerrar'
+};
+
+translations.en.footer = {
+  role: 'Director of Photography',
+  instagram: 'INSTAGRAM',
+  email: 'EMAIL',
+  copyright: `© ${new Date().getFullYear()} Buenos Aires, Argentina`,
+  devBy: 'Design & Dev by'
+};
+translations.es.footer = {
+  role: 'Director de Fotografía',
+  instagram: 'INSTAGRAM',
+  email: 'EMAIL',
+  copyright: `© ${new Date().getFullYear()} Buenos Aires, Argentina`,
+  devBy: 'Diseño y desarrollo por'
+};
+
+translations.en.projectPage = {
+  breadcrumbProjects: 'PROJECTS',
+  creditsTitle: 'CREDITS',
+  informationNotAvailable: 'Information not available',
+  stillsTitle: 'STILLS'
+};
+translations.es.projectPage = {
+  breadcrumbProjects: 'PROYECTOS',
+  creditsTitle: 'CRÉDITOS',
+  informationNotAvailable: 'Información no disponible',
+  stillsTitle: 'STILLS'
+};
+
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState('es');
 
