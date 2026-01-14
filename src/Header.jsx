@@ -87,7 +87,7 @@ export function Header() {
           
           {/* LOGO / NOMBRE */}
           {/* Bajé el min-h a 30px en mobile para pegar más el menú */}
-          <div className="flex flex-col items-center justify-center w-full mb-0 min-h-[30px] md:min-h-[70px]">
+          <div className="flex flex-col items-center justify-center w-full mb-0 min-h-7.5 md:min-h-17.5">
             <h1 className="font-bebas leading-none whitespace-nowrap select-none flex justify-center items-end text-[12vw] md:text-[3.5rem] tracking-widest transition-all duration-500">
               <span className={fadedClass} style={staggeredTransition}>
                 JOAQUÍN&nbsp;
