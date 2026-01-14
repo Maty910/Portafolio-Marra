@@ -6,7 +6,7 @@ import { Footer } from './Footer.jsx';
 import { Projects } from './Projects.jsx';
 
 import reelVideo from './assets/videos/reel.mp4'; 
-import profileImg from './assets/profile/profile.jpg'; 
+import profileImg from './assets/profile/profile.jpeg'; 
 // import reelPoster from '../assets/img/reel-poster.jpg'; // (Opcional: Si tenés un poster, importalo igual)
 
 export function Home() {
