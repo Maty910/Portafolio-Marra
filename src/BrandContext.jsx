@@ -1,12 +1,8 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useState, useContext } from 'react';
 
-// Creamos el contexto
 const BrandContext = createContext();
 
-// El proveedor que va a envolver tu app
-export const BrandProvider = ({ children }) => {
-  // false = todavía no animó (primera vez)
-  // true = ya animó, mostrar directo el final
+export function BrandProvider({ children }) {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   return (
@@ -14,7 +10,8 @@ export const BrandProvider = ({ children }) => {
       {children}
     </BrandContext.Provider>
   );
-};
+}
 
-// Hook para usarlo fácil
-export const useBrand = () => useContext(BrandContext);
+export function useBrand() {
+  return useContext(BrandContext);
+}
