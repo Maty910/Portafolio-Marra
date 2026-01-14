@@ -10,7 +10,7 @@ const projectsData = {
     title: 'Castillos de Arena',
     description: 'En este documental nos adentramos en la vida de Adrián, quien trabaja en un estacionamiento y siempre busca la manera de ponerle una impronta personal a su día a día tan rutinario.',
     credits: {
-      'Directora': 'Maria del Pilar Judez',
+      'Directora': 'María del Pilar Judez',
       'Dirección de Fotografía': 'Joaquin Marraccini',
       'Productora': 'Micaela Cantello',
       'Guionista': 'Agustin Gianotti',
@@ -24,7 +24,7 @@ const projectsData = {
     title: 'Intervalo',
     description: 'Un chico apasionado por las películas, va al cine a ver un reestreno, lo que no se espera es conectar con un personaje de la película de una manera especial.',
     credits: {
-      'Directora': 'Maria del Pilar Judez',
+      'Directora': 'María del Pilar Judez',
       'Dirección de Fotografía': 'Joaquin Marraccini',
       'Productora': 'Micaela Cantello',
       'Guionista': 'Agustin Gianotti',
@@ -51,11 +51,11 @@ const projectsData = {
   // Mantenemos este por si acaso, aunque no pasaste data nueva
   'cada-cosa-que-no-sé': {
     title: 'Cada cosa que no sé',
-    description: 'Videoclip musical con estética onírica. Trabajo de iluminación enfocado en contrastes fuertes y paletas de colores saturados.',
+    description: 'Videoclip musical.',
     credits: { 
-      'Director': 'Nombre Director', 
-      'Color': 'Nombre Colorista', 
-      'Camera': 'Sony Venice' 
+      'Director': 'Lucas Salvi', 
+      'Dirección de Fotografía': 'Joaquin Marraccini',
+      'Banda': 'MASMÉDULA',
     },
     videoUrl: 'https://www.youtube.com/embed/F8fFVuaMbu8'
   }
@@ -119,7 +119,7 @@ function ProjectPage() {
     <div className="bg-black min-h-screen text-white selection:bg-white selection:text-black fade-in">
       <Header />
 
-      <main className="pt-28 md:pt-36 pb-20">
+      <main className="pt-2 md:pt-3 pb-20">
         
         {/* --- NAVEGACIÓN DE CONTEXTO (BREADCRUMB) --- */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-6 md:mb-10 flex items-center gap-3">
