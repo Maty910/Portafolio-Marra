@@ -95,16 +95,28 @@ translations.es.images = {
 translations.en.experience = {
   kicker: '— Technical Credits —',
   title: 'EXPERIENCE',
-  roles: 'Gaffer • Electrician • 1st AC • Grip',
+  rolesSummary: 'Gaffer • Electrician • 1st AC • Grip',
   credits: 'CREDITS',
-  close: 'Close'
+  close: 'Close',
+  roles: {
+    electrico: 'Electrician',
+    primerAsistenteCamara: '1st AC',
+    asistenteSteadicam: 'Steadicam Assistant',
+    gaffer: 'Gaffer'
+  }
 };
 translations.es.experience = {
   kicker: '— Créditos Técnicos —',
   title: 'EXPERIENCIA',
-  roles: 'Gaffer • Electrician • 1st AC • Grip',
+  rolesSummary: 'Gaffer • Electrician • 1st AC • Grip',
   credits: 'CRÉDITOS',
-  close: 'Cerrar'
+  close: 'Cerrar',
+  roles: {
+    electrico: 'Eléctrico',
+    primerAsistenteCamara: '1er Asistente de Cámara',
+    asistenteSteadicam: 'Asistente de Steadicam',
+    gaffer: 'Gaffer'
+  }
 };
 
 translations.en.footer = {
