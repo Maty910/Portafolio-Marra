@@ -27,10 +27,9 @@ const experienceData = [
     id: 1, 
     title: 'Boquitas Pintadas', 
     artist: 'Tan Bionica, Nicki Nicole', 
-    role: 'Gaffer', 
+    role: 'electrico', 
     dp: 'DP Name', 
     year: '2023', 
-    // Si ponés null en img, intenta usar el videoUrl para sacar la foto
     img: null, 
     videoUrl: 'https://www.youtube.com/embed/orvldq8aASI?si=RrXbn7VQybDeUv9M' 
   },
@@ -38,7 +37,7 @@ const experienceData = [
     id: 2, 
     title: 'Tus Cosas', 
     artist: 'Tan Bionica, Pato Sardelli', 
-    role: 'Gaffer', 
+    role: 'electrico', 
     dp: 'DP Name', 
     year: '2023', 
     img: null,
@@ -46,113 +45,93 @@ const experienceData = [
   },
   { 
     id: 3, 
-    title: 'OOPS!', 
-    artist: 'Ángela Torres', 
-    role: 'Steadicam', 
+    title: 'Cobrás con Nave', 
+    artist: 'Comercial', 
+    role: 'primerAsistenteCamara', 
     dp: 'DP Name', 
-    year: '2023', 
+    year: '2022', 
     img: null,
-    videoUrl: 'https://www.youtube.com/embed/i6W5cT0biOY?si=N8Ip06C5UthWR7dS' 
+    videoUrl: 'https://www.youtube.com/embed/apffn_E1jgk?si=kiFVt2iZ68_Vbzy1' 
   },
   { 
     id: 4, 
-    title: 'LUZ ROJA', 
-    artist: 'Ángela Torres', 
-    role: 'Electrician', 
-    dp: 'DP Name', 
-    year: '2023', 
-    img: null,
-    videoUrl: 'https://www.youtube.com/embed/xkHeDpT0_IE?si=rTUG8vJBfYAKEF9o' 
-  },
-  { 
-    id: 5, 
-    title: 'VERTIGO', 
-    artist: 'Ángela Torres', 
-    role: 'Best Boy', 
-    dp: 'DP Name', 
-    year: '2023', 
-    img: null,
-    videoUrl: 'https://www.youtube.com/embed/b339BRRyekg?si=dkxrmNtRdgMIx09i' 
-  },
-  { 
-    id: 6, 
-    title: 'Amor de Chat (Remix)', 
-    artist: 'ECKO, Roman El Original', 
-    role: 'Technician', 
-    dp: 'DP Name', 
-    year: '2023', 
-    img: null,
-    videoUrl: 'https://www.youtube.com/embed/ObJ3T_ElBRU?si=0DQaafvS0QOHHt6N' 
-  },
-  { 
-    id: 7, 
-    title: 'Para Qué Volver (Remix)', 
-    artist: 'ECKO, Miguelito, El Negro Tecla', 
-    role: 'Gaffer', 
-    dp: 'DP Name', 
-    year: '2023', 
-    img: null,
-    videoUrl: 'https://www.youtube.com/embed/sKzXtfKny3o?si=dNWcXe2XBhXly3td' 
-  },
-  { 
-    id: 8, 
-    title: 'Que Explote', 
-    artist: 'El Negro Tecla', 
-    role: 'Electrician', 
-    dp: 'DP Name', 
-    year: '2023', 
-    img: null,
-    videoUrl: 'https://www.youtube.com/embed/sj4PW7yh25Q?si=iMtkxcUUzC3jblHv' 
-  },
-  { 
-    id: 9, 
-    title: 'Short Film', 
-    artist: 'Nico Torres, Pika, Julian Kominek', 
-    role: '1st AC', 
-    dp: 'DP Name', 
-    year: '2022', 
-    img: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=1000',
-    videoUrl: '' 
-  },
-  { 
-    id: 10, 
-    title: 'Una Copa', 
-    artist: 'Homer el Mero Mero, Emanero', 
-    role: 'Gaffer', 
-    dp: 'DP Name', 
-    year: '2022', 
-    img: null,
-    videoUrl: 'https://www.youtube.com/embed/tfQPtZqjbPs?si=JkS9IgwYL2RRn6-H' 
-  },
-  { 
-    id: 11, 
     title: 'SUPEROFERTAS', 
     artist: 'MARTTEIN', 
-    role: 'Technician', 
+    role: 'asistenteSteadicam', 
     dp: 'DP Name', 
     year: '2022', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/ZcLrRYDFyPk?si=cOuuCli4BWtJLiyn' 
   },
   { 
-    id: 12, 
+    id: 5, 
+    title: 'Una Copa', 
+    artist: 'Homer el Mero Mero, Emanero', 
+    role: 'gaffer', 
+    dp: 'DP Name', 
+    year: '2022', 
+    img: null,
+    videoUrl: 'https://www.youtube.com/embed/tfQPtZqjbPs?si=JkS9IgwYL2RRn6-H' 
+  },
+  { 
+    id: 6, 
+    title: 'OOPS!', 
+    artist: 'Ángela Torres', 
+    role: 'electrico', 
+    dp: 'DP Name', 
+    year: '2023', 
+    img: null,
+    videoUrl: 'https://www.youtube.com/embed/i6W5cT0biOY?si=N8Ip06C5UthWR7dS' 
+  },
+  { 
+    id: 7, 
+    title: 'LUZ ROJA', 
+    artist: 'Ángela Torres', 
+    role: 'electrico', 
+    dp: 'DP Name', 
+    year: '2023', 
+    img: null,
+    videoUrl: 'https://www.youtube.com/embed/xkHeDpT0_IE?si=rTUG8vJBfYAKEF9o' 
+  },
+  { 
+    id: 8, 
+    title: 'VERTIGO', 
+    artist: 'Ángela Torres', 
+    role: 'electrico', 
+    dp: 'DP Name', 
+    year: '2023', 
+    img: null,
+    videoUrl: 'https://www.youtube.com/embed/b339BRRyekg?si=dkxrmNtRdgMIx09i' 
+  },
+  { 
+    id: 9, 
+    title: 'Amor de Chat (Remix)', 
+    artist: 'ECKO, Roman El Original', 
+    role: 'electrico', 
+    dp: 'DP Name', 
+    year: '2023', 
+    img: null,
+    videoUrl: 'https://www.youtube.com/embed/ObJ3T_ElBRU?si=0DQaafvS0QOHHt6N' 
+  },
+  { 
+    id: 10, 
+    title: 'Para Qué Volver (Remix)', 
+    artist: 'ECKO, Miguelito, El Negro Tecla', 
+    role: 'electrico', 
+    dp: 'DP Name', 
+    year: '2023', 
+    img: null,
+    videoUrl: 'https://www.youtube.com/embed/sKzXtfKny3o?si=dNWcXe2XBhXly3td' 
+  },
+  { 
+    id: 11, 
     title: 'Instagram Content', 
     artist: 'Solidrums', 
-    role: 'Camera Op', 
+    role: 'Eléctrico', 
     dp: 'DP Name', 
     year: '2022', 
     img: 'https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&q=80&w=1000',
     videoUrl: '' 
-  },
-  { 
-    id: 13, 
-    title: 'Cobrás con Nave', 
-    artist: 'Comercial', 
-    role: 'Gaffer', 
-    dp: 'DP Name', 
-    year: '2022', 
-    img: null,
-    videoUrl: 'https://www.youtube.com/embed/apffn_E1jgk?si=kiFVt2iZ68_Vbzy1' 
   },
 ];
 
@@ -181,7 +160,7 @@ const Experience = () => {
               {t('experience.title')}
             </h1>
             <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-3 uppercase ml-1">
-              {t('experience.roles')}
+              {t('experience.rolesSummary')}
             </p>
           </div>
           
@@ -232,7 +211,7 @@ const Experience = () => {
                   {/* Badge de ROL */}
                   <div className="absolute top-3 right-3">
                     <span className="bg-yellow-400 text-black font-bebas text-xs px-2 py-1 tracking-wider rounded-sm shadow-lg">
-                      {item.role}
+                      {t(`experience.roles.${item.role}`)}
                     </span>
                   </div>
                 </div>
