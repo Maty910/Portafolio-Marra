@@ -195,7 +195,7 @@ const Experience = () => {
                   />
                   
                   {/* Overlay Oscuro Base */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-90 transition-opacity duration-300" />
                   
                   {/* Icono Play al Hover */}
                   {item.videoUrl && (
@@ -244,7 +244,7 @@ const Experience = () => {
       {/* --- MODAL DE VIDEO --- */}
       {selectedVideo && (
         <div 
-          className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-300"
+          className="fixed inset-0 z-100 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-300"
           onClick={() => setSelectedVideo(null)}
         >
           <div className="relative w-full max-w-5xl aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-white/10">
