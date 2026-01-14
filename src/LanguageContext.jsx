@@ -154,11 +154,15 @@ export const LanguageProvider = ({ children }) => {
     try {
       const saved = localStorage.getItem('site-lang');
       if (saved && (saved === 'es' || saved === 'en')) setLang(saved);
-    } catch (e) {}
+    } catch (e) {
+      // Ignore errors if localStorage is not available (e.g., in SSR or private browsing)
+    }
   }, []);
 
   useEffect(() => {
-    try { localStorage.setItem('site-lang', lang); } catch (e) {}
+    try { localStorage.setItem('site-lang', lang); } catch (e) {
+      // Ignore errors if localStorage is not available
+    }
   }, [lang]);
 
   const toggleLanguage = () => setLang((l) => (l === 'es' ? 'en' : 'es'));
@@ -180,4 +184,4 @@ export const LanguageProvider = ({ children }) => {
   );
 };
 
-export const useLanguage = () => useContext(LanguageContext);
+export const useLanguage = () => useContext(LanguageContext); // eslint-disable-line react-refresh/only-export-components
