@@ -42,11 +42,11 @@ export function Footer() {
 
       {/* COPYRIGHT & DEV (Súper sutil al final) */}
       <div className="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
-        <p className="font-montserrat text-[10px] tracking-wider text-white/20 uppercase">
+        <p className="font-montserrat text-[10px] tracking-wider text-white/80 uppercase">
           {t('footer.copyright')}
         </p>
         
-        <p className="font-montserrat text-[10px] tracking-wider text-white/20 uppercase">
+        <p className="font-montserrat text-[10px] tracking-wider text-white/80 uppercase">
           {t('footer.devBy')}{' '}
           <a 
             href="https://github.com/Maty910" 
