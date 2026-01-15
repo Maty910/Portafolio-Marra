@@ -67,13 +67,13 @@ const translations = {
 
 // Extensiones para otras secciones (proyectos, imágenes, experiencia, footer)
 translations.en.projects = {
-  kicker: '— Projects —',
+  kicker: '— My work —',
   title: 'PROJECTS',
   intro: 'Selection of Works',
   countLabel: 'PROJECTS'
 };
 translations.es.projects = {
-  kicker: '— Proyectos —',
+  kicker: '— Mi obra —',
   title: 'PROYECTOS',
   intro: 'Selección de Obras',
   countLabel: 'PROYECTOS'
