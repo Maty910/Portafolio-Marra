@@ -18,7 +18,7 @@ const projectsData = {
       'Sonidista': 'Emma Dupuy',
       'Montaje': 'Camil Inda Arias'
     },
-    videoUrl: 'https://www.youtube.com/embed/kdsB5FriV-0?start=172'
+    videoUrl: 'https://www.youtube.com/embed/kdsB5FriV-0'
   },
   'intervalo': {
     title: 'Intervalo',
@@ -32,7 +32,7 @@ const projectsData = {
       'Sonidista': 'Emma Dupuy',
       'Montaje': 'Camil Inda Arias'
     },
-    videoUrl: 'https://www.youtube.com/embed/l2T53phSMQM?start=405'
+    videoUrl: 'https://www.youtube.com/embed/l2T53phSMQM'
   },
   'la-misma-sombra': {
     title: 'La Misma Sombra',
