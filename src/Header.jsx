@@ -104,7 +104,7 @@ export function Header() {
           {/* MENÚ */}
           {/* Ajustes de espacio: gap-x-3 (más pegaditos horizontalmente), flex-wrap (bajan si no entran) */}
           <ul className={`flex flex-wrap justify-center items-center gap-x-3 gap-y-1 md:gap-10 list-none w-full transition-all duration-1000 ease-in-out
-              ${isScrolled ? 'opacity-100 mt-0 md:mt-0' : 'opacity-80 mt-1 md:mt-2'}`}>
+              ${isScrolled ? 'opacity-100 mt-0 md:mt-0' : 'opacity-80 mt-0 md:mt-0'}`}>
             
             {navItems.map((item) => {
               const isActive = item.path === '/' 
@@ -133,7 +133,7 @@ export function Header() {
           {/* right-4 o right-6 para despegarlo del borde. 
               Alineación vertical centrada con respecto a TODO el header, 
               pero como el menú está pegado al logo, queda visualmente equilibrado. */}
-          <div className={`absolute right-4 md:right-0 top-3 flex flex-row md:flex-row items-center gap-1 md:gap-2 transition-opacity duration-700
+          <div className={`absolute right-5 md:right-5 top-3 flex flex-row md:flex-row items-center gap-1 md:gap-2 transition-opacity duration-700
               ${(isHome && !isScrolled) ? 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto' : 'opacity-100'}`}>
             
             <button 
