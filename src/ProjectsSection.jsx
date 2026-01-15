@@ -22,7 +22,7 @@ function ProjectsSection() {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-black min-h-screen text-white selection:bg-white selection:text-black fade-in font-sans">
+    <div className="bg-black min-h-screen text-white selection:bg-yellow-400 selection:text-black fade-in font-sans">
       <Header />
 
       <main className="pt-2 pb-20 max-w-7xl mx-auto px-6 md:px-12">
