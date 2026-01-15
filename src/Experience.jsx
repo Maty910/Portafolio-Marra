@@ -77,7 +77,7 @@ const experienceData = [
     id: 6, 
     title: 'GRWM', 
     artist: 'TULI, Launch13 ', 
-    role: 'stedicamOperator', 
+    role: 'asistenteSteadicam', 
     dp: 'DP Name', 
     year: '2026', 
     img: null,
@@ -258,15 +258,15 @@ const Experience = () => {
           onClick={() => setSelectedVideo(null)}
         >
           <div className="relative w-full max-w-5xl aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-white/10">
-            
+            {/* Botón de cerrar en la esquina superior izquierda, dentro del modal */}
             <button 
-              className="absolute -top-12 right-0 md:top-4 md:right-4 text-white/50 hover:text-yellow-400 transition-colors z-50 flex items-center gap-2 group"
+              className="absolute top-4 left-4 text-white/50 hover:text-yellow-400 transition-colors z-50 flex items-center gap-2 group bg-black/60 rounded-full p-1"
               onClick={(e) => { e.stopPropagation(); setSelectedVideo(null); }}
             >
-              <span className="text-xs uppercase tracking-widest font-bold hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">{t('experience.close')}</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
+              <span className="text-xs uppercase tracking-widest font-bold hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">{t('experience.close')}</span>
             </button>
 
             <iframe
