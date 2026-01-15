@@ -95,7 +95,7 @@ translations.es.images = {
 translations.en.experience = {
   kicker: '— Technical Credits —',
   title: 'EXPERIENCE',
-  rolesSummary: 'Gaffer • Electrician • 1st AC • Grip',
+  rolesSummary: 'Gaffer • Electrician • 1st AC • Grip • Steadicam Operator',
   credits: 'CREDITS',
   close: 'Close',
   roles: {
@@ -108,7 +108,7 @@ translations.en.experience = {
 translations.es.experience = {
   kicker: '— Créditos Técnicos —',
   title: 'EXPERIENCIA',
-  rolesSummary: 'Gaffer • Electrician • 1st AC • Grip',
+  rolesSummary: 'Gaffer • Eléctrico • 1er AC • Grip • Asistente de Steadicam',
   credits: 'CRÉDITOS',
   close: 'Cerrar',
   roles: {
