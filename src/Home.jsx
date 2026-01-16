@@ -5,9 +5,10 @@ import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
 import { Projects } from './Projects.jsx';
 
-import reelVideo from './assets/videos/reel.mp4'; 
+// 1. IMPORTAMOS AMBOS FORMATOS
+import reelVideoWebm from './assets/videos/reel.webm'; 
+import reelVideoMp4 from './assets/videos/reel.mp4'; // Asegurate de tener este archivo creado
 import profileImg from './assets/profile/profile.jpeg'; 
-// import reelPoster from '../assets/img/reel-poster.jpg'; // (Opcional: Si tenés un poster, importalo igual)
 
 export function Home() {
   
@@ -24,8 +25,6 @@ export function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  // ...
-
   return (
     <div className="bg-black min-h-screen text-white fade-in relative font-sans">
       <Header />
@@ -33,12 +32,17 @@ export function Home() {
       {/* --- 1. REEL SECTION --- */}
       <section className="relative w-full h-screen overflow-hidden">
         <video 
-          autoPlay loop muted playsInline 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          // Agregá un poster (imagen estática) para que se vea algo mientras carga el video
+          poster={featuredProjects[0].img} 
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          {/* USAMOS LA VARIABLE IMPORTADA AQUÍ */}
-          <source src={reelVideo} type="video/mp4" />
-          {/* Si importaste el poster, usalo acá: src={reelPoster} */}
+          <source src={reelVideoWebm} type="video/webm" />
+          <source src={reelVideoMp4} type="video/mp4" />
+          Tu navegador no soporta videos HTML5.
         </video>
 
         <div className="absolute inset-0 bg-black/30 z-10" />
@@ -56,10 +60,10 @@ export function Home() {
       {/* --- 2. FEATURED PROJECTS --- */}
       <section className="py-6 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
         <div className="mb-12 border-b border-white/10 pb-6">
-          <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block">
+          <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block selection:bg-yellow-400 selection:text-black">
             {t('home.selectedWork')}
           </span>
-          <h2 className="font-bebas text-4xl md:text-5xl tracking-widest text-white leading-none">
+          <h2 className="font-bebas text-4xl md:text-5xl tracking-widest text-white leading-none selection:bg-yellow-400 selection:text-black">
             {t('home.latestProjects')}
           </h2>
         </div>
@@ -80,7 +84,7 @@ export function Home() {
             to="/projects" 
             className="group border border-white/20 px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 rounded-sm"
           >
-            <span className="font-montserrat text-xs tracking-[0.3em] uppercase font-bold group-hover:tracking-[0.4em] transition-all">
+            <span className="font-montserrat text-xs tracking-[0.3em] uppercase font-bold group-hover:tracking-[0.4em] transition-all selection:bg-yellow-400 selection:text-black">
               {t('home.viewAll')}
             </span>
           </Link>
@@ -95,7 +99,6 @@ export function Home() {
             {/* FOTO DE PERFIL */}
             <div className="md:col-span-5 relative group">
               <div className="aspect-3/4 w-full overflow-hidden rounded-sm relative">
-                {/* USAMOS LA VARIABLE IMPORTADA AQUÍ */}
                 <img 
                   src={profileImg} 
                   alt="Joaquín Marraccini" 
