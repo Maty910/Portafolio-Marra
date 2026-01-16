@@ -77,7 +77,7 @@ const experienceData = [
     id: 6, 
     title: 'GRWM', 
     artist: 'TULI, Launch13 ', 
-    role: 'asistenteSteadicam', 
+    role: 'SteadicamOP', 
     dp: 'DP Name', 
     year: '2026', 
     img: null,
@@ -137,11 +137,11 @@ const experienceData = [
     id: 12, 
     title: 'Instagram Content', 
     artist: 'Solidrums', 
-    role: 'Eléctrico', 
+    role: 'electrico', 
     dp: 'DP Name', 
     year: '2022', 
-    img: 'https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&q=80&w=1000',
-    videoUrl: '' 
+    img: '',
+    videoUrl: 'https://www.youtube.com/embed/LCdVilBxsQU?si=nBW0XUP8im4Xqr96' 
   },
 ];
 
