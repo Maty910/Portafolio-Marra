@@ -1,6 +1,8 @@
 /* 1. Importamos las fuentes de Google primero */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /* 2. Importamos Tailwind v4 */
 @import "tailwindcss";
@@ -11,7 +13,9 @@
   --font-bebas: "Bebas Neue", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --font-inter: "Inter", sans-serif;
-
+  /* --font-bebas: "Playfair Display", serif; */
+  /* --font-montserrat: "Lato", sans-serif; */
+  /* --font-inter: "Lato", sans-serif; */
   /* Colores personalizados */
   --color-pm-black: #000000;
   --color-pm-gray: #6a6a6a;
