@@ -52,7 +52,7 @@ export function Footer() {
             href="https://github.com/Maty910" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="hover:text-white/60 transition-colors border-b border-transparent hover:border-white/40"
+            className="transition-colors border-b border-transparent hover:text-yellow-400 hover:border-yellow-400 hover:text-shadow-[0_0_5px_rgba(250,204,21,0.4)]"
           >
             @Maty910
           </a>
