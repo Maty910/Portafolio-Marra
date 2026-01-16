@@ -17,7 +17,14 @@ const translations = {
         'I am Joaquín Marraccini, Director of Photography and Photographer.',
         'My focus is on visual storytelling, using light and color to enhance the narrative.',
         'With experience in advertising, music videos, and fiction, I always seek the best aesthetic and technical quality in every project.'
-      ]
+      ],
+      projectCategories: {
+        commercial: 'Commercial',
+        musicVideo: 'Music Video',
+        fiction: 'Fiction',
+        documentary: 'Documentary',
+        film: 'Feature Film',
+      }
     },
     contact: {
       kicker: '— Get in Touch —',
@@ -47,7 +54,15 @@ const translations = {
         'Soy Joaquín Marraccini, Director de Fotografía y Fotógrafo.',
         'Mi enfoque está en la narración visual, utilizando la luz y el color para potenciar la historia.',
         'Con experiencia en publicidad, videoclips y ficción, siempre busco la mayor calidad estética y técnica en cada proyecto.'
-      ]
+      ],
+      projectCategories: {
+        commercial: 'Publicidad',
+        musicVideo: 'Videoclip',
+        fiction: 'Ficción',
+        documentary: 'Documental',
+        film: 'Largometraje'
+      }
+
     },
     contact: {
       kicker: '— Contactame —',
@@ -102,7 +117,8 @@ translations.en.experience = {
     electrico: 'Electrician',
     primerAsistenteCamara: '1st AC',
     asistenteSteadicam: 'Steadicam Assistant',
-    gaffer: 'Gaffer'
+    gaffer: 'Gaffer',
+    SteadicamOP: 'Steadicam Operator'
   }
 };
 translations.es.experience = {
@@ -115,7 +131,8 @@ translations.es.experience = {
     electrico: 'Eléctrico',
     primerAsistenteCamara: '1er Asistente de Cámara',
     asistenteSteadicam: 'Asistente de Steadicam',
-    gaffer: 'Gaffer'
+    gaffer: 'Gaffer',
+    SteadicamOP: 'Operador de Steadicam'
   }
 };
 
