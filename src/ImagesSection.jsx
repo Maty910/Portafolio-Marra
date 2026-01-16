@@ -27,25 +27,15 @@ export function ImagesSection() {
           <div className="flex flex-col items-start">
             
             {/* KICKER / SUBTÍTULO DE SECCIÓN (Consistencia UX) */}
-            <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 ml-1">
+            <span className="text-yellow-400 font-montserrat text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-1 ml-1 selection:bg-yellow-400 selection:text-black">
               {t('images.kicker')}
             </span>
-
-            {/* Título Principal */}
-            <h1 className="font-bebas text-5xl md:text-7xl tracking-widest text-white leading-none">
-              {t('images.title')}
-            </h1>
 
             {/* Bajada / Descripción */}
             <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-3 uppercase ml-1">
               {t('images.description')}
             </p>
           </div>
-          
-          {/* Contador de imágenes (Oculto en muy pequeños, visible en md) */}
-          <span className="font-montserrat text-[10px] md:text-xs text-white/30 tracking-widest mb-1 uppercase hidden md:block">
-            {photos.length} {t('images.countLabel')}
-          </span>
         </div>
 
         {/* --- MASONRY LAYOUT (Estilo Pinterest) --- */}
