@@ -163,20 +163,13 @@ const Experience = () => {
         {/* --- HEADER DE SECCIÓN --- */}
         <div className="mb-2 border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="flex flex-col items-start">
-            <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 ml-1">
+            <span className="text-yellow-400 font-montserrat text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-1 ml-1 selection:bg-yellow-400 selection:text-black">
               {t('experience.kicker')}
             </span>
-            <h1 className="font-bebas text-5xl md:text-7xl tracking-widest text-white leading-none">
-              {t('experience.title')}
-            </h1>
-            <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-3 uppercase ml-1">
+            <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-3 uppercase ml-1 selection:bg-yellow-400 selection:text-black">
               {t('experience.rolesSummary')}
             </p>
           </div>
-          
-          <span className="font-montserrat text-xs text-white/30 hidden md:block tracking-widest mb-1 uppercase">
-            {experienceData.length} {t('experience.credits')}
-          </span>
         </div>
 
         {/* --- GRID DE TARJETAS --- */}
