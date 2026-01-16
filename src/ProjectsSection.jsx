@@ -7,11 +7,13 @@ import { useLanguage } from './LanguageContext.jsx';
 function ProjectsSection() {
   
   // 1. Definimos tus datos aquí para mantener el render limpio y poder contar cuántos hay
+  const { t } = useLanguage();
+
   const myProjects = [
-    { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: "Fiction" },
-    { name: "Intervalo", img: "intervalo.jpg", cat: "Fiction" },
-    { name: "Castillo de arena", img: "castillo de arena.jpg", cat: "Documentary" },
-    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: "Video Clip" },
+    { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
+    { name: "Intervalo", img: "intervalo.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
+    { name: "Castillo de arena", img: "castillo de arena.jpg", cat: t('home.projectCategories.documentary', 'Documental') },
+    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: t('home.projectCategories.musicVideo', 'Videoclip') },
   ];
 
   // 2. Scroll al inicio al cargar la página
@@ -19,7 +21,7 @@ function ProjectsSection() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { t } = useLanguage();
+  // ...
 
   return (
     <div className="bg-black min-h-screen text-white selection:bg-yellow-400 selection:text-black fade-in font-sans">
