@@ -21,8 +21,6 @@ function ProjectsSection() {
     window.scrollTo(0, 0);
   }, []);
 
-  // ...
-
   return (
     <div className="bg-black min-h-screen text-white selection:bg-yellow-400 selection:text-black fade-in font-sans">
       <Header />
@@ -34,25 +32,15 @@ function ProjectsSection() {
           <div className="flex flex-col items-start">
             
             {/* SUBTÍTULO / KICKER */}
-            <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 ml-1 selection:bg-yellow-400 selection:text-black fade-in">
+            <span className="text-yellow-400 font-montserrat text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-1 ml-1 selection:bg-yellow-400 selection:text-black fade-in">
               {t('projects.kicker')}
             </span>
-
-            {/* TÍTULO PRINCIPAL */}
-            <h1 className="font-bebas text-5xl md:text-6xl tracking-widest text-white leading-none selection:bg-yellow-400 selection:text-black fade-in">
-              {t('projects.title')}
-            </h1>
 
             {/* BAJADA */}
             <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-2 uppercase ml-1 selection:bg-yellow-400 selection:text-black fade-in">
               {t('projects.intro')}
             </p>
           </div>
-          
-          {/* CONTADOR DINÁMICO */}
-          <span className="font-montserrat text-xs text-white/30 hidden md:block tracking-widest mb-1 uppercase selection:bg-yellow-400 selection:text-black fade-in">
-            {myProjects.length} {t('projects.countLabel')}
-          </span>
         </div>
 
         {/* --- GRID DE PROYECTOS --- */}
