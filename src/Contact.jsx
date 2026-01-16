@@ -127,7 +127,7 @@ export default function Contact() {
 
             {/* Location */}
             <div className="pt-8 border-t border-white/10">
-              <span className="font-bebas text-white/30 tracking-widest text-lg block mb-2">LOCATION</span>
+              <span className="font-bebas text-white/30 tracking-widest text-lg block mb-2">{t('contact.location')}</span>
               <span className="font-montserrat text-white/80 text-sm tracking-wide">{t('contact.based')}</span>
             </div>
 

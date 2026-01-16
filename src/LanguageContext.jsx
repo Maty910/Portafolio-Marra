@@ -37,7 +37,8 @@ const translations = {
       available: 'Available for freelance projects',
       emailLabel: 'Email Me',
       follow: 'Follow My Work',
-      based: 'Based in Buenos Aires, Argentina 🇦🇷'
+      based: 'Based in Buenos Aires, Argentina 🇦🇷',
+      location: 'Location'
     }
   },
   es: {
@@ -75,7 +76,8 @@ const translations = {
       available: 'Disponible para proyectos freelance',
       emailLabel: 'Escribime',
       follow: 'Seguí mi trabajo',
-      based: 'Basado en Buenos Aires, Argentina 🇦🇷'
+      based: 'Basado en Buenos Aires, Argentina 🇦🇷',
+      location: 'Ubicación'
     }
   }
 };
