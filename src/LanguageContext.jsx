@@ -14,8 +14,8 @@ const translations = {
       aboutMe: 'ABOUT ME',
       letsTalk: "Let's Talk",
       aboutLines: [
-        'I am Joaquín Marraccini, Director of Photography and Photographer.',
-        'My focus is on visual storytelling, using light and color to enhance the narrative.',
+        'I am Joaquín Marraccini, a photographer passionate about visual storytelling based in Buenos Aires, Argentina.',
+        'I specialize in using different types of framing, lighting, and compositions to deepen the message of each project.',
         'With experience in advertising, music videos, and fiction, I always seek the best aesthetic and technical quality in every project.'
       ],
       projectCategories: {
@@ -31,8 +31,8 @@ const translations = {
       title: 'CONTACT & ABOUT',
       aboutTitle: 'About Me',
       aboutLines: [
-        'I am Joaquin Marraccini, a Cinematographer and Photographer based in Buenos Aires, Argentina.',
-        'Passion for visual storytelling drives every frame I capture.'
+        'I am Joaquín Marraccini, director of photography and photographer. I graduated from the National School of Filmmaking and Cinematic Experimentation in Argentina and have been working in the field since 2016.',
+        'I have always been fascinated by visual arts and their various techniques, and as a director of photography, I am open to exploring all kinds of worlds and stories.'
       ],
       available: 'Available for freelance projects',
       emailLabel: 'Email Me',
@@ -51,9 +51,9 @@ const translations = {
       aboutMe: 'SOBRE MÍ',
       letsTalk: 'Hablemos',
       aboutLines: [
-        'Soy Joaquín Marraccini, Director de Fotografía y Fotógrafo.',
-        'Mi enfoque está en la narración visual, utilizando la luz y el color para potenciar la historia.',
-        'Con experiencia en publicidad, videoclips y ficción, siempre busco la mayor calidad estética y técnica en cada proyecto.'
+        'Soy Joaquín Marraccini, fotógrafo apasionado por contar historias a través de lo visual.',
+        'Me especializo en utilizar diferentes tipos de encuadres, iluminación y composiciones para profundizar en el mensaje de cada proyecto.',
+        'Con experiencia en publicidad, videoclips y ficción, siempre busco trabajar en equipo para lograr la máxima calidad estética y técnica.'
       ],
       projectCategories: {
         commercial: 'Publicidad',
@@ -69,8 +69,8 @@ const translations = {
       title: 'CONTACTO & ACERCA',
       aboutTitle: 'Sobre mí',
       aboutLines: [
-        'Soy Joaquín Marraccini, Director de Fotografía y Fotógrafo en Buenos Aires, Argentina.',
-        'La pasión por la narración visual guía cada plano que capturo.'
+        'Soy Joaquín Marraccini, director de fotografía y fotógrafo. Me recibí en la Escuela Nacional de Realización y Experimentación Cinematográfica en Argentina y trabajo en el rubro desde 2016.',
+        'Siempre me fascinaron las artes visuales y sus variadas técnicas, y como director de fotografía, estoy abierto a explorar todo tipo de mundos e historias.'
       ],
       available: 'Disponible para proyectos freelance',
       emailLabel: 'Escribime',
