@@ -11,18 +11,20 @@ import profileImg from './assets/profile/profile.jpeg';
 
 export function Home() {
   
+  const { t } = useLanguage();
+
   const featuredProjects = [
-    { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: "Fiction" },
-    { name: "Intervalo", img: "intervalo.jpg", cat: "Fiction" },
-    { name: "Castillo de arena", img: "castillo de arena.jpg", cat: "Documentary" },
-    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: "Video Art" },
+    { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
+    { name: "Intervalo", img: "intervalo.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
+    { name: "Castillo de arena", img: "castillo de arena.jpg", cat: t('home.projectCategories.documentary', 'Documental') },
+    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: t('home.projectCategories.musicVideo', 'Videoclip') },
   ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { t } = useLanguage();
+  // ...
 
   return (
     <div className="bg-black min-h-screen text-white fade-in relative font-sans">
@@ -52,7 +54,7 @@ export function Home() {
       </section>
 
       {/* --- 2. FEATURED PROJECTS --- */}
-      <section className="py-2 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
+      <section className="py-6 px-6 md:px-12 max-w-7xl mx-auto bg-black relative z-20">
         <div className="mb-12 border-b border-white/10 pb-6">
           <span className="text-yellow-400 font-montserrat text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2 block">
             {t('home.selectedWork')}
