@@ -15,7 +15,7 @@ function ProjectsSection() {
   const myProjects = [
     { name: "Dale", img: "", imgSrc: daleThumb, cat: t('home.projectCategories.musicVideo', 'Videoclip') },
     { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
-    { name: "Live session Ibarra Diciervo", img: "", imgSrc: ibarra1Thumb, cat: t('home.projectCategories.musicVideo', 'Videoclip') },
+    { name: "Ibarra Diciervo", img: "", imgSrc: ibarra1Thumb, cat: 'Live session' },
     { name: "Intervalo", img: "intervalo.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
     { name: "Castillo de arena", img: "castillo de arena.jpg", cat: t('home.projectCategories.documentary', 'Documental') },
     { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: t('home.projectCategories.musicVideo', 'Videoclip') },
