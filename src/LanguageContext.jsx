@@ -157,13 +157,43 @@ translations.en.projectPage = {
   breadcrumbProjects: 'PROJECTS',
   creditsTitle: 'CREDITS',
   informationNotAvailable: 'Information not available',
-  stillsTitle: 'STILLS'
+  stillsTitle: 'STILLS',
+  creditLabels: {
+    'Dirección': 'Direction',
+    'Producción': 'Production',
+    'Dirección de Fotografía': 'Director of Photography',
+    'Dirección de Arte': 'Art Direction',
+    'Montaje': 'Editing',
+    'Directora': 'Director',
+    'Productora': 'Producer',
+    'Guionista': 'Screenwriter',
+    'Sonidista': 'Sound',
+    'Director': 'Director',
+    'Banda': 'Band',
+    'Voz': 'Vocals',
+    'Guitarra': 'Guitar'
+  }
 };
 translations.es.projectPage = {
   breadcrumbProjects: 'PROYECTOS',
   creditsTitle: 'CRÉDITOS',
   informationNotAvailable: 'Información no disponible',
-  stillsTitle: 'STILLS'
+  stillsTitle: 'STILLS',
+  creditLabels: {
+    'Dirección': 'Dirección',
+    'Producción': 'Producción',
+    'Dirección de Fotografía': 'Dirección de Fotografía',
+    'Dirección de Arte': 'Dirección de Arte',
+    'Montaje': 'Montaje',
+    'Directora': 'Directora',
+    'Productora': 'Productora',
+    'Guionista': 'Guionista',
+    'Sonidista': 'Sonidista',
+    'Director': 'Director',
+    'Banda': 'Banda',
+    'Voz': 'Voz',
+    'Guitarra': 'Guitarra'
+  }
 };
 
 export const LanguageProvider = ({ children }) => {
