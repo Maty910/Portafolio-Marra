@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export function Projects({ projectName, imgFileName, category = "CINEMATOGRAPHY" }) {
+export function Projects({ projectName, imgFileName, imgSrc, category = "CINEMATOGRAPHY" }) {
   // Slug limpio para la URL
   const slug = projectName.replace(/\s+/g, '-').toLowerCase();
 
@@ -13,7 +13,7 @@ export function Projects({ projectName, imgFileName, category = "CINEMATOGRAPHY"
         {/* CONTENEDOR DE IMAGEN (Aspect Ratio 16:9) */}
         <div className="relative w-full aspect-video bg-gray-900 overflow-hidden">
           <img
-            src={`./img/ProjectsImgs/${imgFileName}`}
+            src={imgSrc || `./img/ProjectsImgs/${imgFileName}`}
             alt={projectName}
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
