@@ -72,13 +72,14 @@ const projectsData = {
     },
     videoUrl: 'https://www.youtube.com/embed/F8fFVuaMbu8'
   },
-  'live-session-ibarra-diciervo': {
-    title: 'Live session - Ibarra Diciervo',
+  'ibarra-diciervo': {
+    title: 'Ibarra Diciervo',
     description: 'Live session musical.',
     credits: {
       'Dirección de Fotografía': 'Joaquín Marraccini / Santiago Cupi',
       'Voz': 'Maria Eugenia Ibarra',
-      'Guitarra': 'Guido Diciervo'
+      'Guitarra': 'Guido Diciervo',
+      'Edición': 'Tiago Canavarro'
     },
     videoUrl: 'https://www.youtube.com/embed/E3xwMkl_XpQ?si=YCAmPjK_7rHZKNZV'
   }
