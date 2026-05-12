@@ -6,6 +6,19 @@ import { useLanguage } from './LanguageContext.jsx';
 
 // DATA: Info actualizada de los proyectos
 const projectsData = {
+  'dale': {
+    title: 'DALE!!',
+    descriptionEs: '"DALE !!" es un cortometraje visceral de Pedro Vaamonde que explora la introspección y la superación del miedo a través de una narrativa visual envolvente. Con una atmósfera cargada de emoción, la obra nos invita a abrazar lo extraño y a perder el temor a la duda y la indecisión, recordándonos que, incluso cuando la ciudad cambia y los disfraces caen, lo que realmente importa es el viaje interno y la valentía de seguir adelante.',
+    descriptionEn: '"DALE !!" is a visceral short film by Pedro Vaamonde that explores introspection and overcoming fear through an immersive visual narrative. With an emotionally charged atmosphere, the work invites us to embrace the strange and lose the fear of doubt and indecision, reminding us that even when the city changes and the masks fall, what truly matters is the internal journey and the courage to move forward.',
+    credits: {
+      'Dirección': 'Malena Franco / Matías Minotti',
+      'Producción': 'Catalina Ragone',
+      'Dirección de Fotografía': 'Joaquín Marraccini',
+      'Dirección de Arte': 'Paloma Beracochea / Mijail Amaray / Oriana Sol Buenrostro',
+      'Montaje': 'Valen Roig'
+    },
+    videoUrl: 'https://www.youtube.com/embed/1NglXlFSqQg?si=zRXX0HZ82VBfjgOq'
+  },
   'castillo-de-arena': {
     title: 'Castillos de Arena',
     description: 'En este documental nos adentramos en la vida de Adrián, quien trabaja en un estacionamiento y siempre busca la manera de ponerle una impronta personal a su día a día tan rutinario.',
@@ -58,6 +71,16 @@ const projectsData = {
       'Banda': 'MASMÉDULA',
     },
     videoUrl: 'https://www.youtube.com/embed/F8fFVuaMbu8'
+  },
+  'live-session-ibarra-diciervo': {
+    title: 'Live session - Ibarra Diciervo',
+    description: 'Live session musical.',
+    credits: {
+      'Dirección de Fotografía': 'Joaquín Marraccini / Santiago Cupi',
+      'Voz': 'Maria Eugenia Ibarra',
+      'Guitarra': 'Guido Diciervo'
+    },
+    videoUrl: 'https://www.youtube.com/embed/E3xwMkl_XpQ?si=YCAmPjK_7rHZKNZV'
   }
 };
 
@@ -79,12 +102,21 @@ function ProjectPage() {
     window.scrollTo(0, 0);
   }, [projectName]);
 
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+
+  const projectDescription = projectInfo.descriptionEs && projectInfo.descriptionEn
+    ? (lang === 'en' ? projectInfo.descriptionEn : projectInfo.descriptionEs)
+    : projectInfo.description;
 
   // Carga de imágenes (Mantiene la lógica de carpetas original)
   useEffect(() => {
     const selectImagesByProject = (name) => {
       switch (name) {
+        case 'dale':
+          return import.meta.glob([
+            './assets/Stills dale/*.{png,jpg,jpeg,svg}',
+            '!./assets/Stills dale/amanecer_1.2.10.jpg'
+          ]);
         case 'castillo-de-arena':
           // Asegurate que la carpeta en assets se llame "Stills Castillos de arena"
           return import.meta.glob('./assets/Stills Castillos de arena/*.{png,jpg,jpeg,svg}');
@@ -168,7 +200,7 @@ function ProjectPage() {
                   {projectInfo.title}
                 </h1>
               <p className="font-montserrat font-light text-white/80 text-sm md:text-base leading-7 tracking-wide max-w-2xl selection:bg-yellow-400 selection:text-black">
-                {projectInfo.description}
+                {projectDescription}
               </p>
             </div>
 
@@ -182,7 +214,7 @@ function ProjectPage() {
                 {Object.entries(projectInfo.credits).length > 0 ? (
                   Object.entries(projectInfo.credits).map(([role, name]) => (
                     <div key={role} className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
-                      <span className="text-white/40 uppercase text-xs tracking-wider font-semibold selection:bg-yellow-400 selection:text-black">{role}</span>
+                      <span className="text-white/40 uppercase text-xs tracking-wider font-semibold selection:bg-yellow-400 selection:text-black">{t(`projectPage.creditLabels.${role}`, role)}</span>
                       <span className="text-white font-medium tracking-wide text-right selection:bg-yellow-400 selection:text-black">{name}</span>
                     </div>
                   ))
