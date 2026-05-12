@@ -127,7 +127,7 @@ function ProjectPage() {
           return import.meta.glob('./assets/Stills LMS/*.{png,jpg,jpeg,svg}');
         case 'intervalo':
           return import.meta.glob('./assets/Stills Intervalo/*.{png,jpg,jpeg,svg}');
-        case 'live-session-ibarra-diciervo':
+        case 'ibarra-diciervo':
           return import.meta.glob('./assets/Stills ibarra/*.{png,jpg,jpeg,svg}');
         default:
           return {};
