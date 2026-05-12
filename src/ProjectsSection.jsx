@@ -4,13 +4,18 @@ import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
 import { useLanguage } from './LanguageContext.jsx';
 
+import daleThumb from './assets/Stills dale/amanecer_1.2.10.jpg';
+const liveSessionThumb = 'https://img.youtube.com/vi/E3xwMkl_XpQ/hqdefault.jpg';
+
 function ProjectsSection() {
   
   // 1. Definimos tus datos aquí para mantener el render limpio y poder contar cuántos hay
   const { t } = useLanguage();
 
   const myProjects = [
+    { name: "Dale", img: "", imgSrc: daleThumb, cat: t('home.projectCategories.musicVideo', 'Videoclip') },
     { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
+    { name: "Live session Ibarra Diciervo", img: "", imgSrc: liveSessionThumb, cat: t('home.projectCategories.musicVideo', 'Videoclip') },
     { name: "Intervalo", img: "intervalo.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
     { name: "Castillo de arena", img: "castillo de arena.jpg", cat: t('home.projectCategories.documentary', 'Documental') },
     { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: t('home.projectCategories.musicVideo', 'Videoclip') },
@@ -50,6 +55,7 @@ function ProjectsSection() {
               key={index}
               projectName={proj.name}
               imgFileName={proj.img}
+              imgSrc={proj.imgSrc}
               category={proj.cat} // Pasamos la categoría si querés que varíe
             />
           ))}
