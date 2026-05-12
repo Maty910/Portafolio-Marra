@@ -10,15 +10,17 @@ import reelVideoWebm from './assets/videos/reel.webm';
 import reelVideoMp4 from './assets/videos/reel.mp4'; // Asegurate de tener este archivo creado
 import profileImg from './assets/profile/profile.jpeg'; 
 
+import daleThumb from './assets/Stills dale/amanecer_1.2.10.jpg';
+
 export function Home() {
   
   const { t } = useLanguage();
 
   const featuredProjects = [
+    { name: "Dale", img: "", imgSrc: daleThumb, cat: t('home.projectCategories.musicVideo', 'Videoclip') },
     { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
     { name: "Intervalo", img: "intervalo.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
     { name: "Castillo de arena", img: "castillo de arena.jpg", cat: t('home.projectCategories.documentary', 'Documental') },
-    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: t('home.projectCategories.musicVideo', 'Videoclip') },
   ];
 
   useEffect(() => {
@@ -74,6 +76,7 @@ export function Home() {
               key={i}
               projectName={proj.name}
               imgFileName={proj.img}
+              imgSrc={proj.imgSrc}
               category={proj.cat}
             />
           ))}
