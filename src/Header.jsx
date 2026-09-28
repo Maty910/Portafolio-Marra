@@ -80,9 +80,9 @@ export function Header() {
   const navItems = [
     { label: t('nav.home'), path: '/' },
     { label: t('nav.projects'), path: '/projects' },
-    { label: t('nav.images'), path: '/images' },
     { label: t('nav.experience'), path: '/experience' },
     { label: t('nav.contact'), path: '/contact' },
+    { label: t('nav.images'), path: '/images' },
   ];
 
   const setLang = (target) => {

@@ -21,9 +21,9 @@ export function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<ProjectsSection />} />
             <Route path="/projects/:projectName" element={<ProjectPage />} />
-            <Route path="/images" element={<ImagesSection />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/images" element={<ImagesSection />} />
           </Routes>
         </Router>
       </BrandProvider>
