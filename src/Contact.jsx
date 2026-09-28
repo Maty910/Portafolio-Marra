@@ -35,7 +35,7 @@ export default function Contact() {
           <div className="space-y-8">
             
             {/* IMAGEN DE CONTACTO (NUEVA) */}
-            <div className="group relative w-full aspect-video overflow-hidden rounded-sm bg-gray-900 border border-white/10">
+            <div className="group relative w-full aspect-video overflow-hidden rounded-sm bg-gray-900 border border-white/10 scale-90">
               <img 
                 src={profileImg} 
                 alt="On Set" 
