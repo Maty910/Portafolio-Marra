@@ -28,7 +28,6 @@ const experienceData = [
     title: 'Boquitas Pintadas', 
     artist: 'Tan Bionica, Nicki Nicole', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2023', 
     img: null, 
     videoUrl: 'https://www.youtube.com/embed/orvldq8aASI?si=RrXbn7VQybDeUv9M' 
@@ -38,7 +37,6 @@ const experienceData = [
     title: 'Tus Cosas', 
     artist: 'Tan Bionica, Pato Sardelli', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2023', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/UKB8ww78MuQ?si=8wVDkyDXkiQ8-cvw' 
@@ -48,7 +46,6 @@ const experienceData = [
     title: 'Cobrás con Nave', 
     artist: 'Comercial', 
     role: 'primerAsistenteCamara', 
-    dp: 'DP Name', 
     year: '2022', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/apffn_E1jgk?si=kiFVt2iZ68_Vbzy1' 
@@ -58,7 +55,6 @@ const experienceData = [
     title: 'SUPEROFERTAS', 
     artist: 'MARTTEIN', 
     role: 'asistenteSteadicam', 
-    dp: 'DP Name', 
     year: '2022', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/ZcLrRYDFyPk?si=cOuuCli4BWtJLiyn' 
@@ -68,7 +64,6 @@ const experienceData = [
     title: 'Una Copa', 
     artist: 'Homer el Mero Mero, Emanero', 
     role: 'gaffer', 
-    dp: 'DP Name', 
     year: '2022', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/tfQPtZqjbPs?si=JkS9IgwYL2RRn6-H' 
@@ -78,7 +73,6 @@ const experienceData = [
     title: 'GRWM', 
     artist: 'TULI, Launch13 ', 
     role: 'SteadicamOP', 
-    dp: 'DP Name', 
     year: '2026', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/2BFA3Owb23o?si=0QwiOszSIU7Fl5F-' 
@@ -88,7 +82,6 @@ const experienceData = [
     title: 'OOPS!', 
     artist: 'Ángela Torres', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2023', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/i6W5cT0biOY?si=N8Ip06C5UthWR7dS' 
@@ -98,7 +91,6 @@ const experienceData = [
     title: 'LUZ ROJA', 
     artist: 'Ángela Torres', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2023', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/xkHeDpT0_IE?si=rTUG8vJBfYAKEF9o' 
@@ -108,7 +100,6 @@ const experienceData = [
     title: 'VERTIGO', 
     artist: 'Ángela Torres', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2023', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/b339BRRyekg?si=dkxrmNtRdgMIx09i' 
@@ -118,7 +109,6 @@ const experienceData = [
     title: 'Amor de Chat (Remix)', 
     artist: 'ECKO, Roman El Original', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2023', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/ObJ3T_ElBRU?si=0DQaafvS0QOHHt6N' 
@@ -128,7 +118,6 @@ const experienceData = [
     title: 'Para Qué Volver (Remix)', 
     artist: 'ECKO, Miguelito, El Negro Tecla', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2023', 
     img: null,
     videoUrl: 'https://www.youtube.com/embed/sKzXtfKny3o?si=dNWcXe2XBhXly3td' 
@@ -138,7 +127,6 @@ const experienceData = [
     title: 'Instagram Content', 
     artist: 'Solidrums', 
     role: 'electrico', 
-    dp: 'DP Name', 
     year: '2022', 
     img: '',
     videoUrl: 'https://www.youtube.com/embed/LCdVilBxsQU?si=nBW0XUP8im4Xqr96' 
@@ -226,18 +214,10 @@ const Experience = () => {
                     {item.artist}
                   </p>
 
-                  <h3 className="text-white font-bebas text-2xl tracking-wide leading-none mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                  <h3 className="text-white font-bebas text-2xl tracking-wide leading-none mb-1 group-hover:text-yellow-400 transition-colors duration-300">
                     {item.title}
                   </h3>
-
-                  <div className="flex items-center gap-2 border-t border-white/10 pt-3 mt-auto">
-                    <span className="text-white/30 text-[9px] uppercase tracking-wider">DP</span>
-                    <span className="text-white/80 font-montserrat text-[10px] uppercase tracking-widest font-bold">
-                      {item.dp}
-                    </span>
-                  </div>
                 </div>
-
               </div>
             );
           })}
