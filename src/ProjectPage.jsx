@@ -6,6 +6,29 @@ import { useLanguage } from './LanguageContext.jsx';
 
 // DATA: Info actualizada de los proyectos
 const projectsData = {
+  'la-mitad': {
+    title: 'La Mitad',
+    descriptionEs: '',
+    descriptionEn: '',
+    credits: {
+      'Dirección Creativa': 'Santi Malahí / naxhito / Greta Sujoluzky / Juan Vives',
+      'Dirección de Fotografía': 'Joaquin Marraccini',
+      'Producción': 'Camila Ruiz Diaz / Camila Rojas',
+      'Guión': 'MAP / Santi Malahí / naxhito / Juan Vives',
+      'Dirección de Arte': 'Greta Sujoluzky',
+      'Montaje - VFX - Online': 'Tiago Canavarro'
+    },
+    videoUrl: 'https://www.youtube.com/embed/kiizT2_hzrs?si=QA-64AZOaLYiBwO4'
+  },
+  'quimera': {
+    title: 'Quimera',
+    descriptionEs: '',
+    descriptionEn: '',
+    credits: {
+      'Dirección de Fotografía': 'Joaquin Marraccini'
+    },
+    videoUrl: 'https://www.youtube.com/embed/BUcmMWqkdTY?si=xQ8SmC7p8dP1Z3KK'
+  },
   'dale': {
     title: 'DALE!!',
     descriptionEs: '"DALE !!" es un cortometraje visceral de Pedro Vaamonde que explora la introspección y la superación del miedo a través de una narrativa visual envolvente. Con una atmósfera cargada de emoción, la obra nos invita a abrazar lo extraño y a perder el temor a la duda y la indecisión, recordándonos que, incluso cuando la ciudad cambia y los disfraces caen, lo que realmente importa es el viaje interno y la valentía de seguir adelante.',
@@ -82,7 +105,7 @@ const projectsData = {
       'Edición': 'Tiago Canavarro'
     },
     videoUrl: 'https://www.youtube.com/embed/E3xwMkl_XpQ?si=YCAmPjK_7rHZKNZV'
-  }
+  },
 };
 
 function ProjectPage() {
@@ -114,10 +137,7 @@ function ProjectPage() {
     const selectImagesByProject = (name) => {
       switch (name) {
         case 'dale':
-          return import.meta.glob([
-            './assets/Stills dale/*.{png,jpg,jpeg,svg}',
-            '!./assets/Stills dale/amanecer_1.2.10.jpg'
-          ]);
+          return import.meta.glob('./assets/Stills dale/*.{png,jpg,jpeg,svg}');
         case 'castillo-de-arena':
           // Asegurate que la carpeta en assets se llame "Stills Castillos de arena"
           return import.meta.glob('./assets/Stills Castillos de arena/*.{png,jpg,jpeg,svg}');
@@ -129,6 +149,8 @@ function ProjectPage() {
           return import.meta.glob('./assets/Stills Intervalo/*.{png,jpg,jpeg,svg}');
         case 'ibarra-diciervo':
           return import.meta.glob('./assets/Stills ibarra/*.{png,jpg,jpeg,svg}');
+        case 'la-mitad':
+          return import.meta.glob('./assets/Stills MAP/*.{png,jpg,jpeg,svg}');
         default:
           return {};
       }
