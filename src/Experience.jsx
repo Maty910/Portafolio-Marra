@@ -23,6 +23,11 @@ const getYouTubeThumbnail = (url) => {
 
 // --- DATOS DE EXPERIENCIA TÉCNICA ---
 const experienceData = [
+  { id: 13, title: 'Complicada', artist: 'Connie Isla', role: 'gaffer', year: '', img: null, videoUrl: 'https://www.youtube.com/embed/I28Rlw6CqhY?si=c11SEf74iwUNQo6R' },
+  { id: 14, title: 'Hare Lo Que Me Pidas', artist: 'Indios ft. Juliana Gattas', role: 'electrico', year: '', img: null, videoUrl: 'https://www.youtube.com/embed/fW9WFu90udk?si=vWDfh7mpMs9qRt2y' },
+  { id: 15, title: 'EL MENOR', artist: 'Los menores', role: 'electrico', year: '', img: null, videoUrl: 'https://www.youtube.com/embed/DC1DxumLTxY?si=Nqa-xryAQPNIML5g' },
+  { id: 16, title: 'BOSS', artist: 'Mati Soste // Klan', role: 'foquista', year: '', img: null, videoUrl: 'https://www.youtube.com/embed/zZT5qye7dtU?si=AxULtGVrQ73bfGNN' },
+  { id: 17, title: 'Amar es un arte (Peñecos)', artist: 'Fer Vazquez, Nacho Milia', role: 'foquista', year: '', img: null, videoUrl: 'https://www.youtube.com/embed/DjFFdbWopyg?si=H8tyK2IqaZAlR4eG' },
   { 
     id: 1, 
     title: 'Boquitas Pintadas', 

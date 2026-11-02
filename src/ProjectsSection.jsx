@@ -6,6 +6,7 @@ import { useLanguage } from './LanguageContext.jsx';
 
 import daleThumb from './assets/Stills dale/amanecer_1.2.10.jpg';
 import ibarra1Thumb from './assets/Stills ibarra/1.png';
+import laMitadThumb from './assets/Stills MAP/LA MITAD_MAP_1.9.1.jpg';
 
 function ProjectsSection() {
   
@@ -13,14 +14,16 @@ function ProjectsSection() {
   const { t } = useLanguage();
 
   const myProjects = [
+    { name: "La Mitad", img: "", imgSrc: laMitadThumb, cat: t('home.projectCategories.musicVideo', 'Videoclip') },
+    { name: "Quimera", img: "", imgSrc: 'https://img.youtube.com/vi/BUcmMWqkdTY/maxresdefault.jpg', cat: t('home.projectCategories.publicidad', 'Publicidad') },
     { name: "Dale", img: "", imgSrc: daleThumb, cat: t('home.projectCategories.musicVideo', 'Videoclip') },
     { name: "La misma sombra", img: "bajo la misma sombra.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
     { name: "Ibarra Diciervo", img: "", imgSrc: ibarra1Thumb, cat: 'Live session' },
     { name: "Intervalo", img: "intervalo.jpg", cat: t('home.projectCategories.fiction', 'Ficción') },
     { name: "Castillo de arena", img: "castillo de arena.jpg", cat: t('home.projectCategories.documentary', 'Documental') },
-    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: t('home.projectCategories.musicVideo', 'Videoclip') },
+    { name: "Cada cosa que no sé", img: "masmedula.jpg", cat: t('home.projectCategories.musicVideo', 'Videoclip') }
   ];
-
+    
   // 2. Scroll al inicio al cargar la página
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -40,11 +43,6 @@ function ProjectsSection() {
             <span className="text-yellow-400 font-montserrat text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-1 ml-1 selection:bg-yellow-400 selection:text-black fade-in">
               {t('projects.kicker')}
             </span>
-
-            {/* BAJADA */}
-            <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-2 uppercase ml-1 selection:bg-yellow-400 selection:text-black fade-in">
-              {t('projects.intro')}
-            </p>
           </div>
         </div>
 
