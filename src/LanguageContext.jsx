@@ -24,6 +24,7 @@ const translations = {
         fiction: 'Fiction',
         documentary: 'Documentary',
         film: 'Feature Film',
+        publicidad: 'Advertising'
       }
     },
     contact: {
@@ -61,7 +62,8 @@ const translations = {
         musicVideo: 'Videoclip',
         fiction: 'Ficción',
         documentary: 'Documental',
-        film: 'Largometraje'
+        film: 'Largometraje',
+        publicidad: 'Publicidad'
       }
 
     },
@@ -76,7 +78,7 @@ const translations = {
       available: 'Disponible para proyectos freelance',
       emailLabel: 'Escribime',
       follow: 'Seguí mi trabajo',
-      based: 'Basado en Buenos Aires, Argentina 🇦🇷',
+      based: 'Ubicado en Buenos Aires, Argentina 🇦🇷',
       location: 'Ubicación'
     }
   }
@@ -120,7 +122,8 @@ translations.en.experience = {
     primerAsistenteCamara: '1st AC',
     asistenteSteadicam: 'Steadicam Assistant',
     gaffer: 'Gaffer',
-    SteadicamOP: 'Steadicam Operator'
+    SteadicamOP: 'Steadicam Operator',
+    foquista: 'Focus Puller / Camera Assistant'
   }
 };
 translations.es.experience = {
@@ -134,7 +137,8 @@ translations.es.experience = {
     primerAsistenteCamara: '1er Asistente de Cámara',
     asistenteSteadicam: 'Asistente de Steadicam',
     gaffer: 'Gaffer',
-    SteadicamOP: 'Operador de Steadicam'
+    SteadicamOP: 'Operador de Steadicam',
+    foquista: 'Foquista / Ayudante de cámara'
   }
 };
 
@@ -163,6 +167,9 @@ translations.en.projectPage = {
     'Producción': 'Production',
     'Dirección de Fotografía': 'Director of Photography',
     'Dirección de Arte': 'Art Direction',
+    'Dirección Creativa': 'Creative Direction',
+    'Guión': 'Screenplay',
+    'Montaje - VFX - Online': 'Editing - VFX - Online',
     'Montaje': 'Editing',
     'Directora': 'Director',
     'Productora': 'Producer',
@@ -184,6 +191,9 @@ translations.es.projectPage = {
     'Producción': 'Producción',
     'Dirección de Fotografía': 'Dirección de Fotografía',
     'Dirección de Arte': 'Dirección de Arte',
+    'Dirección Creativa': 'Dirección Creativa',
+    'Guión': 'Guión',
+    'Montaje - VFX - Online': 'Montaje - VFX - Online',
     'Montaje': 'Montaje',
     'Directora': 'Directora',
     'Productora': 'Productora',
