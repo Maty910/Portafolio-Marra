@@ -30,11 +30,6 @@ export function ImagesSection() {
             <span className="text-yellow-400 font-montserrat text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-1 ml-1 selection:bg-yellow-400 selection:text-black">
               {t('images.kicker')}
             </span>
-
-            {/* Bajada / Descripción */}
-            <p className="font-montserrat text-white/40 text-xs md:text-sm tracking-[0.2em] mt-3 uppercase ml-1">
-              {t('images.description')}
-            </p>
           </div>
         </div>
 
